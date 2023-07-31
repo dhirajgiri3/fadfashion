@@ -103,6 +103,10 @@ const FooterContainer = styled.div`
         padding: 3rem;
         background: #fff;
         border-radius: 100px;
+
+        @media screen and (max-width: 768px) {
+          padding: 1.5rem;
+        }
       }
     }
 
