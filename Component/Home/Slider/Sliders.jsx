@@ -128,6 +128,9 @@ const Content = styled.div`
     width: 85%;
     margin: 0 auto;
     height: 20vh;
+    background: #131313;
+    padding: 1.5rem;
+    border-radius: 20px;
   }
 `;
 
