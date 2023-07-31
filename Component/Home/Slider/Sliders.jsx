@@ -208,7 +208,7 @@ const Sliders = () => {
                 y: 0,
                 opacity: 1,
                 transition: {
-                  duration: 1,
+                  duration: 1.5,
                   ease: "easeOut",
                   delay: 0.3,
                   repeat: false,
@@ -234,7 +234,7 @@ const Sliders = () => {
                 y: 0,
                 opacity: 1,
                 transition: {
-                  duration: 1,
+                  duration: 1.5,
                   ease: "easeOut",
                   delay: 0.3,
                   repeat: false,
@@ -254,7 +254,7 @@ const Sliders = () => {
                 y: 0,
                 opacity: 1,
                 transition: {
-                  duration: 1,
+                  duration: 1.5,
                   ease: "easeOut",
                   delay: 0.3,
                   repeat: false,
@@ -285,7 +285,7 @@ const Sliders = () => {
                 y: 0,
                 opacity: 1,
                 transition: {
-                  duration: 1,
+                  duration: 1.5,
                   ease: "easeOut",
                   delay: 0.3,
                   repeat: false,
@@ -329,7 +329,7 @@ const Sliders = () => {
                 y: 0,
                 opacity: 1,
                 transition: {
-                  duration: 1,
+                  duration: 1.5,
                   ease: "easeOut",
                   delay: 0.3,
                   repeat: false,

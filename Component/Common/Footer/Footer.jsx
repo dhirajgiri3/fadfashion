@@ -8,7 +8,6 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import FacebookIcon from "@mui/icons-material/Facebook";
-import { motion } from "framer-motion";
 
 const FooterContainer = styled.div`
   position: relative;
@@ -218,29 +217,11 @@ function Footer() {
         loop
         muted
         playsInline
-        src="https://res.cloudinary.com/divbobkmd/video/upload/v1690758500/fad-reel-1_resize_j910nb.mp4"
+        src="https://res.cloudinary.com/divbobkmd/video/upload/v1690836829/trial004_crtrci.mp4"
         className="bgvideo"
       />
       <div className="overlay" />
-      <motion.div
-        initial={{
-          y: "100%",
-          opacity: 0,
-        }}
-        whileInView={{
-          y: 0,
-          opacity: 1,
-          transition: {
-            duration: 1,
-            ease: "easeOut",
-            delay: 0.3,
-            repeat: false,
-            type: "spring",
-            stiffness: 100,
-          },
-        }}
-        className="content"
-      >
+      <div className="content">
         <div className="top">
           <div className="left">
             <Link href="/">Join the waitlist</Link>
@@ -315,7 +296,7 @@ function Footer() {
             <p>© 2021 FAD. All rights reserved.</p>
           </div>
         </div>
-      </motion.div>
+      </div>
     </FooterContainer>
   );
 }

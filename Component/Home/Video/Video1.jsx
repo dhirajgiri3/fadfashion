@@ -24,6 +24,9 @@ const Video1Container = styled.div`
     object-fit: cover;
     border-radius: 50px;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     @media screen and (max-width: 768px) {
       height: 90vh;
@@ -34,9 +37,6 @@ const Video1Container = styled.div`
 
   .cursor {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     height: 10rem;
     width: 10rem;
     background: #202020;

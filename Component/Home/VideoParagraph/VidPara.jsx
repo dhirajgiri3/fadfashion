@@ -110,7 +110,7 @@ function VidPara() {
             muted={isMuted}
             ref={videoRef}
             onClick={handleToggleMute}
-            src="https://res.cloudinary.com/divbobkmd/video/upload/v1690836829/trial004_crtrci.mp4"
+            src="https://res.cloudinary.com/divbobkmd/video/upload/v1690758500/fad-reel-1_resize_j910nb.mp4"
           ></motion.video>
         </span>
         With FDA, you'll never miss a moment in the fashion scene. Stay updated
