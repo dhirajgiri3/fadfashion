@@ -117,10 +117,17 @@ const Content = styled.div`
   align-items: flex-start;
   width: 60%;
   transition: all 1s ease-in-out;
+  overflow: hidden;
+  overflow-y: scroll;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 
   @media (max-width: 768px) {
     width: 85%;
     margin: 0 auto;
+    height: 20vh;
   }
 `;
 
