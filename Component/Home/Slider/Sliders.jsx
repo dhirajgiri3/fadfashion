@@ -16,14 +16,14 @@ const images = [img3, img2, img1];
 
 const text = [
   "Unlock coupon and more by doing fashion",
-  "Level up with fashion",
-  "Create Share fashion",
+  "Level up with fashion ",
+  "Create Share fashion ",
 ];
 
 const para = [
-  "At every tier, they will unlock coupons for brands which they can redeem to purchase different products like clothes, accessories, etc.",
-  "The users will start at Level 1. Gain points based on the likes they receive on their posts and profile visits to level up.",
-  "Show your funky sense of fashion to people and learn about fashion without being judged.",
+  "At every tier, they will unlock coupons for brands which they can redeem to purchase different products clothes, accessories, etc",
+  "the users will start at Level 1.gain points based on the likes they receive on their post and profile visits you level up",
+  "show your funky sense of fashion to people and learn about fashion and do everything fashion without being judged",
 ];
 
 const SliderContainer = styled.div`
@@ -155,27 +155,25 @@ const Sliders = () => {
     para: para[index],
   }));
 
-  const slideAnimation = () => {
-    gsap.fromTo(
-      imageRef.current,
-      {
-        scale: 0,
-        opacity: 0.5,
-        y: "-500px",
-      },
-      {
-        scale: 1,
-        opacity: 1,
-        y: 0,
-        rotation: 360, // Adding rotation property to rotate the element 360 degrees
-        borderRadius: "50%", // Adding borderRadius property to make the element circular
-        boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.3)", // Adding boxShadow property for a subtle shadow effect
-        ease: "easeInOut",
-        duration: 1,
-        delay: 0.5,
-      }
-    );
-  };
+  const item = gsap.utils.toArray(imageRef.current);
+
+  const state = Flip.getState(item, { absolute: true });
+
+  gsap.set(items, { clearProps: "all" });
+
+  Flip.from(state, {
+    ease: "power3.inOut",
+    absolute: true,
+    duration: 1,
+    opacity: 0,
+    scale: 0.5,
+    onStart: () => {
+      gsap.set(items, { clearProps: "all" });
+    },
+    onComplete: () => {
+      gsap.set(items, { clearProps: "all" });
+    },
+  });
 
   const handleNextSlide = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
@@ -199,18 +197,18 @@ const Sliders = () => {
             />
           </ImageContainer>
           <Content>
-            <Heading title="FAD">{items[currentIndex].text}</Heading>
-            <Para title="FAD">{items[currentIndex].para}</Para>
+            <Heading title="FAD">
+              {items[currentIndex].text}
+            </Heading>
+            <Para title="FAD">
+              {items[currentIndex].para}
+            </Para>
           </Content>
         </Sliderss>
 
         <Buttons>
-          <ButtonDiv
-            onClick={() => {
-              handlePrevSlide();
-              slideAnimation();
-            }}
-          >
+          <ButtonDiv onClick={handlePrevSlide}>
+            {" "}
             <WideButton
               text="Prev"
               fontsize="1.2rem"
@@ -229,12 +227,8 @@ const Sliders = () => {
               mwidth="15rem"
             />
           </ButtonDiv>
-          <ButtonDiv
-            onClick={() => {
-              handleNextSlide();
-              slideAnimation();
-            }}
-          >
+          <ButtonDiv onClick={handleNextSlide}>
+            {" "}
             <WideButton
               text="Next"
               fontsize="1.2rem"
