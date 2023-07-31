@@ -1,9 +1,8 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Hero from "@/Component/Home/Hero/Hero";
 import ImageGrid from "@/Component/Home/ImageGrid/imageGrid";
-// import LocomotiveScroll from "locomotive-scroll";
 import styled from "styled-components";
 import Slider from "@/Component/Home/Slider/Sliders";
 import Video1 from "@/Component/Home/Video/Video1";
@@ -22,32 +21,7 @@ const PageContainer = styled.div`
 `;
 
 function Page() {
-  const [scrollInstance, setScrollInstance] = useState(null);
 
-  // useEffect(() => {
-  //   const options = {
-  //     lerp: 0.5,
-  //     multiplier: 0.8,
-
-  //     smartphone: {
-  //       smooth: false,
-  //     },
-  //     tablet: {
-  //       smooth: false,
-  //     },
-  //   };
-
-  //   // Assuming LocomotiveScroll returns an instance of LocomotiveScrolls
-  //   const LocomotiveScrolls = new LocomotiveScroll(options);
-  //   setScrollInstance(LocomotiveScrolls);
-
-  //   return () => {
-  //     // Check if scrollInstance is valid before calling destroy()
-  //     if (scrollInstance) {
-  //       scrollInstance.destroy();
-  //     }
-  //   };
-  // }, []);
 
   return (
     <PageContainer>

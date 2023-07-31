@@ -8,6 +8,7 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import FacebookIcon from "@mui/icons-material/Facebook";
+import { motion } from "framer-motion";
 
 const FooterContainer = styled.div`
   position: relative;
@@ -221,7 +222,25 @@ function Footer() {
         className="bgvideo"
       />
       <div className="overlay" />
-      <div className="content">
+      <motion.div
+        initial={{
+          y: "100%",
+          opacity: 0,
+        }}
+        whileInView={{
+          y: 0,
+          opacity: 1,
+          transition: {
+            duration: 1,
+            ease: "easeOut",
+            delay: 0.3,
+            repeat: false,
+            type: "spring",
+            stiffness: 100,
+          },
+        }}
+        className="content"
+      >
         <div className="top">
           <div className="left">
             <Link href="/">Join the waitlist</Link>
@@ -265,22 +284,38 @@ function Footer() {
           <div className="right">
             <div className="icons">
               <Link href="/">
-                <InstagramIcon />
+                <InstagramIcon
+                  style={{
+                    fontSize: "2rem",
+                  }}
+                />
               </Link>
               <Link href="/">
-                <FacebookIcon />
+                <FacebookIcon
+                  style={{
+                    fontSize: "2rem",
+                  }}
+                />
               </Link>
               <Link href="/">
-                <TwitterIcon />
+                <TwitterIcon
+                  style={{
+                    fontSize: "2rem",
+                  }}
+                />
               </Link>
               <Link href="/">
-                <YouTubeIcon />
+                <YouTubeIcon
+                  style={{
+                    fontSize: "2rem",
+                  }}
+                />
               </Link>
             </div>
             <p>© 2021 FAD. All rights reserved.</p>
           </div>
         </div>
-      </div>
+      </motion.div>
     </FooterContainer>
   );
 }

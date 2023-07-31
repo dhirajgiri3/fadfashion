@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import React, { useRef, useState } from "react";
 import styled from "styled-components";
 
@@ -86,7 +87,23 @@ function VidPara() {
         fashion sense, knowledge, and skills. Be the influencer you aspire to
         be, showcasing your unique style and inspiring others in the process.
         <span>
-          <video
+          <motion.video
+            initial={{
+              y: "100%",
+              opacity: 0,
+            }}
+            whileInView={{
+              y: 0,
+              opacity: 1,
+              transition: {
+                duration: 1,
+                ease: "easeOut",
+                delay: 0.3,
+                repeat: false,
+                type: "spring",
+                stiffness: 100,
+              },
+            }}
             autoPlay
             loop
             playsInline
@@ -94,7 +111,7 @@ function VidPara() {
             ref={videoRef}
             onClick={handleToggleMute}
             src="https://res.cloudinary.com/divbobkmd/video/upload/v1690836829/trial004_crtrci.mp4"
-          ></video>
+          ></motion.video>
         </span>
         With FDA, you'll never miss a moment in the fashion scene. Stay updated
         with the latest trends, events, and insider knowledge, all in one place.

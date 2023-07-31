@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 
@@ -23,7 +24,7 @@ const Video1Container = styled.div`
     object-fit: cover;
     border-radius: 50px;
     cursor: pointer;
-    
+
     @media screen and (max-width: 768px) {
       height: 90vh;
       width: 100%;
@@ -52,7 +53,6 @@ const Video1Container = styled.div`
     border: none;
     outline: none;
     color: #fff;
-
   }
 `;
 
@@ -87,31 +87,54 @@ function Video1() {
     setIsPlaying((prevState) => !prevState);
   };
 
-  const handleMouseEnter = () => {
-    cursorRef.current.style.transition = "opacity 0.3s ease-in-out"; // Hide the custom cursor with a smooth transition
-    cursorRef.current.style.opacity = "0";
-  };
-
-  const handleMouseLeave = () => {
-    cursorRef.current.style.transition = "opacity 0.3s ease-in-out"; // Show the custom cursor with a smooth transition
-    cursorRef.current.style.opacity = "1";
-  };
-
   return (
     <Video1Container>
-      <video
+      <motion.video
+        initial={{
+          y: 100,
+          opacity: 0,
+        }}
+        whileInView={{
+          y: 0,
+          opacity: 1.5,
+          transition: {
+            duration: 1,
+            ease: "easeOut",
+            delay: 0.3,
+            repeat: false,
+            stiffness: 100,
+          },
+        }}
         ref={videoRef}
         autoPlay
         loop
         onClick={handleVideoClick}
-        // onMouseEnter={handleMouseEnter}
-        // onMouseLeave={handleMouseLeave}
         src="https://res.cloudinary.com/divbobkmd/video/upload/v1690745994/fad-reel-2_AdobeExpress_simbrc.mp4"
         className="video"
       />
-      <div onClick={handleVideoClick} ref={cursorRef} className="cursor">
+      <motion.div
+        initial={{
+          y: 100,
+          opacity: 0,
+        }}
+        whileInView={{
+          y: 0,
+          opacity: 1.5,
+          transition: {
+            duration: 1,
+            ease: "easeOut",
+            delay: 0.3,
+            repeat: false,
+            type: "spring",
+            stiffness: 100,
+          },
+        }}
+        onClick={handleVideoClick}
+        ref={cursorRef}
+        className="cursor"
+      >
         Play
-      </div>
+      </motion.div>
     </Video1Container>
   );
 }

@@ -9,6 +9,7 @@ import img1 from "@/Assets/Images/img1.png";
 import img2 from "@/Assets/Images/img2.png";
 import img3 from "@/Assets/Images/img3.png";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 gsap.registerPlugin(Flip);
 
@@ -117,8 +118,7 @@ const Content = styled.div`
   align-items: flex-start;
   width: 60%;
   transition: all 1s ease-in-out;
-  overflow: hidden;
-  overflow-y: scroll;
+  height: 15vh;
 
   &::-webkit-scrollbar {
     display: none;
@@ -131,6 +131,8 @@ const Content = styled.div`
     background: #131313;
     padding: 1.5rem;
     border-radius: 20px;
+    overflow: hidden;
+    overflow-y: scroll;
   }
 `;
 
@@ -197,15 +199,72 @@ const Sliders = () => {
       <SliderContainer>
         <Sliderss>
           <ImageContainer>
-            <Slide
-              src={items[currentIndex].image}
-              alt={`Slide ${currentIndex}`}
-              ref={imageRef}
-            />
+            <motion.div
+              initial={{
+                y: "100%",
+                opacity: 0,
+              }}
+              whileInView={{
+                y: 0,
+                opacity: 1,
+                transition: {
+                  duration: 1,
+                  ease: "easeOut",
+                  delay: 0.3,
+                  repeat: false,
+                  type: "spring",
+                  stiffness: 100,
+                },
+              }}
+            >
+              <Slide
+                src={items[currentIndex].image}
+                alt={`Slide ${currentIndex}`}
+                ref={imageRef}
+              />
+            </motion.div>
           </ImageContainer>
           <Content>
-            <Heading title="FAD">{items[currentIndex].text}</Heading>
-            <Para title="FAD">{items[currentIndex].para}</Para>
+            <motion.div
+              initial={{
+                y: 100,
+                opacity: 0,
+              }}
+              whileInView={{
+                y: 0,
+                opacity: 1,
+                transition: {
+                  duration: 1,
+                  ease: "easeOut",
+                  delay: 0.3,
+                  repeat: false,
+                  type: "spring",
+                  stiffness: 100,
+                },
+              }}
+            >
+              <Heading title="FAD">{items[currentIndex].text}</Heading>
+            </motion.div>
+            <motion.div
+              initial={{
+                y: 100,
+                opacity: 0,
+              }}
+              whileInView={{
+                y: 0,
+                opacity: 1,
+                transition: {
+                  duration: 1,
+                  ease: "easeOut",
+                  delay: 0.3,
+                  repeat: false,
+                  type: "spring",
+                  stiffness: 100,
+                },
+              }}
+            >
+              <Para title="FAD">{items[currentIndex].para}</Para>
+            </motion.div>
           </Content>
         </Sliderss>
 
@@ -216,47 +275,87 @@ const Sliders = () => {
               slideAnimation();
             }}
           >
-            <WideButton
-              text="Prev"
-              fontsize="1.2rem"
-              color="#ddd"
-              bg="#232323"
-              hoverbg="#ff005c"
-              hovercolor="#fff"
-              bordercolor="#303030"
-              mbordercolor="#202020"
-              mpaddingx="4rem"
-              mpaddingy="1.2rem"
-              mfontsize="1.5rem"
-              height="14rem"
-              width="7rem"
-              mheight="6rem"
-              mwidth="15rem"
-            />
+            {" "}
+            <motion.div
+              initial={{
+                y: 100,
+                opacity: 0,
+              }}
+              whileInView={{
+                y: 0,
+                opacity: 1,
+                transition: {
+                  duration: 1,
+                  ease: "easeOut",
+                  delay: 0.3,
+                  repeat: false,
+                  type: "spring",
+                  stiffness: 100,
+                },
+              }}
+            >
+              <WideButton
+                text="Prev"
+                fontsize="1.2rem"
+                color="#ddd"
+                bg="#232323"
+                hoverbg="#ff005c"
+                hovercolor="#fff"
+                bordercolor="#303030"
+                mbordercolor="#202020"
+                mpaddingx="4rem"
+                mpaddingy="1.2rem"
+                mfontsize="1.5rem"
+                height="14rem"
+                width="7rem"
+                mheight="6rem"
+                mwidth="15rem"
+              />{" "}
+            </motion.div>
           </ButtonDiv>
+
           <ButtonDiv
             onClick={() => {
               handleNextSlide();
               slideAnimation();
             }}
           >
-            <WideButton
-              text="Next"
-              fontsize="1.2rem"
-              color="#ddd"
-              bg="#232323"
-              hoverbg="#ff005c"
-              hovercolor="#fff"
-              bordercolor="#303030"
-              mbordercolor="#202020"
-              mpaddingx="4rem"
-              mpaddingy="1.2rem"
-              mfontsize="1.5rem"
-              height="14rem"
-              width="7rem"
-              mheight="6rem"
-              mwidth="15rem"
-            />
+            <motion.div
+              initial={{
+                y: 100,
+                opacity: 0,
+              }}
+              whileInView={{
+                y: 0,
+                opacity: 1,
+                transition: {
+                  duration: 1,
+                  ease: "easeOut",
+                  delay: 0.3,
+                  repeat: false,
+                  type: "spring",
+                  stiffness: 100,
+                },
+              }}
+            >
+              <WideButton
+                text="Next"
+                fontsize="1.2rem"
+                color="#ddd"
+                bg="#232323"
+                hoverbg="#ff005c"
+                hovercolor="#fff"
+                bordercolor="#303030"
+                mbordercolor="#202020"
+                mpaddingx="4rem"
+                mpaddingy="1.2rem"
+                mfontsize="1.5rem"
+                height="14rem"
+                width="7rem"
+                mheight="6rem"
+                mwidth="15rem"
+              />
+            </motion.div>
           </ButtonDiv>
         </Buttons>
       </SliderContainer>

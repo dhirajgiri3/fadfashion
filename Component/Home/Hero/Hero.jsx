@@ -4,11 +4,7 @@ import svg2 from "@/Assets/Images/iPhone 15-2.svg";
 import styled from "styled-components";
 import WideButton from "@/Component/Animation/Buttons/WideButton";
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import { Flip } from "gsap/Flip";
-
-gsap.registerPlugin(ScrollTrigger);
-gsap.registerPlugin(Flip);
+import { motion } from "framer-motion";
 
 const Container = styled.div`
   width: 100%;
@@ -42,7 +38,7 @@ const Container = styled.div`
     h1 {
       font-size: 9rem;
       line-height: 1.1;
-      font-family: 'kurdasan';
+      font-family: "kurdasan";
       font-weight: 100;
       letter-spacing: 1px;
 
@@ -96,7 +92,25 @@ const Container = styled.div`
 function Hero() {
   return (
     <Container>
-      <div className="left">
+      <motion.div
+        initial={{
+          y: 100,
+          opacity: 0,
+        }}
+        animate={{
+          y: 0,
+          opacity: 1,
+          transition: {
+            duration: 1,
+            ease: "easeOut",
+            delay: 0.3,
+            repeat: false,
+            type: "spring",
+            stiffness: 100,
+          },
+        }}
+        className="left"
+      >
         <h1>
           Welcome to <br /> <span>FAD</span>{" "}
         </h1>
@@ -107,8 +121,26 @@ function Hero() {
           fashion passion and earn money for your skills! Indulge without fear
           of judgment. Join us now
         </p>
-      </div>
-      <div className="mid">
+      </motion.div>
+      <motion.div
+        initial={{
+          y: 100,
+          opacity: 0,
+        }}
+        animate={{
+          y: 0,
+          opacity: 1,
+          transition: {
+            duration: 1,
+            ease: "easeOut",
+            delay: 0.3,
+            repeat: false,
+            type: "spring",
+            stiffness: 100,
+          },
+        }}
+        className="mid"
+      >
         <WideButton
           text="Join FAD"
           fontsize="1.5rem"
@@ -124,10 +156,28 @@ function Hero() {
           height="15rem"
           width="15rem"
         />
-      </div>
-      <div className="right">
+      </motion.div>
+      <motion.div
+        initial={{
+          y: 100,
+          opacity: 0,
+        }}
+        animate={{
+          y: 0,
+          opacity: 1,
+          transition: {
+            duration: 1,
+            ease: "easeOut",
+            delay: 0.3,
+            repeat: false,
+            type: "spring",
+            stiffness: 100,
+          },
+        }}
+        className="right"
+      >
         <ImageScaleAnime imgUrl={svg2} className="iphone" />
-      </div>
+      </motion.div>
     </Container>
   );
 }
