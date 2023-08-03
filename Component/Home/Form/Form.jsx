@@ -8,7 +8,6 @@ const FormContainer = styled.div`
   min-height: 100vh;
   height: 100%;
   z-index: 0;
-  background: #fafafa;
   padding: 5rem 10rem;
   display: flex;
   justify-content: center;
@@ -94,7 +93,7 @@ const FormContainer = styled.div`
 
       textarea {
         width: 70%;
-        padding: 1rem;
+        padding: 1rem 2rem;
         border: 1.5px solid #00000020;
         border-radius: 100px;
         color: #111;
@@ -103,6 +102,7 @@ const FormContainer = styled.div`
         margin-top: 1rem;
         resize: none;
         font-family: "tenon";
+        display: none;
 
         &::placeholder {
           color: #999;
@@ -133,6 +133,7 @@ const FormContainer = styled.div`
         justify-content: center;
         align-items: center;
         transition: all 0.3s ease-in-out;
+        margin: 3rem 0;
 
         &:hover {
           background: #ff005c;

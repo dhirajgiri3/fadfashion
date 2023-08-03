@@ -278,7 +278,7 @@ function Footer() {
             <div className="bottom">
               <Link href="mailto:dhirajg934@gmail.com">
                 {" "}
-                <p>fad@gamil.com </p>
+                <p>fad@gmail.com </p>
               </Link>
 
               <Link href="tel:+919904392992">

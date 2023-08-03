@@ -33,7 +33,6 @@ const SliderContainer = styled.div`
   width: 100%;
   margin: 0 auto;
   gap: 3rem;
-  margin-top: 2rem;
   height: 100vh;
   justify-content: center;
   align-items: center;

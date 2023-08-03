@@ -5,14 +5,14 @@ import styled from "styled-components";
 const Video1Container = styled.div`
   position: relative;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
+  height: 100%;
   overflow: hidden;
   object-fit: cover;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 10rem 0;
-  padding: 0 10rem;
+  padding: 10rem;
 
   @media screen and (max-width: 768px) {
     height: 100%;
