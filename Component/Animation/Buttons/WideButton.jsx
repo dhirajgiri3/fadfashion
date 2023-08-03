@@ -98,6 +98,10 @@ const WideButton = ({
       outline: none;
       font-weight: 100;
 
+      &:hover {
+        border: 0.5px solid ${hoverbg};
+      }
+
       @media (max-width: 768px) {
         border-color: ${mbordercolor};
       }

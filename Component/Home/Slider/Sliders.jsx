@@ -37,6 +37,7 @@ const SliderContainer = styled.div`
   height: 100vh;
   justify-content: center;
   align-items: center;
+  padding: 10rem;
 
   @media screen and (max-width: 768px) {
     flex-direction: column;
@@ -179,7 +180,6 @@ const Sliders = () => {
         opacity: 1,
         ease: "power2.inOut",
         duration: 0.7,
-        delay: 0.3,
       }
     );
   };
@@ -210,7 +210,7 @@ const Sliders = () => {
                 transition: {
                   duration: 1.5,
                   ease: "easeOut",
-                  delay: 0.3,
+
                   repeat: false,
                   type: "spring",
                   stiffness: 100,
@@ -236,7 +236,7 @@ const Sliders = () => {
                 transition: {
                   duration: 1.5,
                   ease: "easeOut",
-                  delay: 0.3,
+
                   repeat: false,
                   type: "spring",
                   stiffness: 100,
@@ -247,7 +247,7 @@ const Sliders = () => {
             </motion.div>
             <motion.div
               initial={{
-                y: 100,
+                y: 10,
                 opacity: 0,
               }}
               whileInView={{
@@ -256,7 +256,7 @@ const Sliders = () => {
                 transition: {
                   duration: 1.5,
                   ease: "easeOut",
-                  delay: 0.3,
+
                   repeat: false,
                   type: "spring",
                   stiffness: 100,
@@ -287,7 +287,7 @@ const Sliders = () => {
                 transition: {
                   duration: 1.5,
                   ease: "easeOut",
-                  delay: 0.3,
+
                   repeat: false,
                   type: "spring",
                   stiffness: 100,
@@ -331,7 +331,7 @@ const Sliders = () => {
                 transition: {
                   duration: 1.5,
                   ease: "easeOut",
-                  delay: 0.3,
+
                   repeat: false,
                   type: "spring",
                   stiffness: 100,

@@ -6,7 +6,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: relative;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  z-index: 1000;
 
   @media screen and (max-width: 768px) {
     justify-content: center;

@@ -28,10 +28,10 @@ body {
   display: grid;
   grid-template-areas: "main";
   height: 100vh;
-  padding: 0 3rem;
   overflow: hidden;
   cursor: none;
   overflow-x: hidden;
+  padding: 0 10rem;
 
   @media screen and (max-width: 768px) {
     padding: 0 1rem;
@@ -265,7 +265,7 @@ body {
   position: absolute;
   margin: 0;
   color: #fff;
-  background: linear-gradient(#00000050, #00000030 , #00000000);
+  background: linear-gradient(#00000050, #00000030, #00000000);
   font-size: 1.5rem;
   line-height: 1.5;
   padding: 1rem;

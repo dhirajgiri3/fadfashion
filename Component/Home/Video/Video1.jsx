@@ -12,10 +12,11 @@ const Video1Container = styled.div`
   justify-content: center;
   align-items: center;
   margin: 10rem 0;
+  padding: 0 10rem;
 
   @media screen and (max-width: 768px) {
     height: 100%;
-    padding: 0 2rem;
+    padding: 0 1rem;
   }
 
   video {

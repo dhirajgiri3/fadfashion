@@ -11,23 +11,41 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 
 const FooterContainer = styled.div`
   position: relative;
-  width: 100%;
+  width: calc(100% - 10rem);
   height: 85vh;
   z-index: 0;
+  margin: 0 5rem;
+  margin-top: 5rem;
 
   @media screen and (max-width: 768px) {
     min-height: 80vh;
+    width: 100%;
+    margin: 0;
+    margin-top: 0;
+  }
+
+  @media screen and (max-width: 400px) {
+    min-height: 95vh;
+    width: 100%;
+    margin: 0;
+    margin-top: 0;
   }
 
   video {
     height: 100%;
     width: 100%;
     object-fit: cover;
-    border-top-right-radius: 50px;
-    border-top-left-radius: 50px;
+    border-top-right-radius: 100px;
+    border-top-left-radius: 100px;
     position: absolute;
-    top: 0;
+    bottom: 0;
     left: 0;
+    z-index: 1;
+
+    @media screen and (max-width: 768px) {
+      border-top-right-radius: 0;
+      border-top-left-radius: 0;
+    }
   }
 
   .overlay {
@@ -38,8 +56,13 @@ const FooterContainer = styled.div`
     width: 100%;
     background: #00000099;
     z-index: 2;
-    border-top-right-radius: 50px;
-    border-top-left-radius: 50px;
+    border-top-right-radius: 100px;
+    border-top-left-radius: 100px;
+
+    @media screen and (max-width: 768px) {
+      border-top-right-radius: 0;
+      border-top-left-radius: 0;
+    }
   }
 
   .content {
@@ -49,8 +72,8 @@ const FooterContainer = styled.div`
     height: 100%;
     width: 100%;
     z-index: 3;
-    border-top-right-radius: 50px;
-    border-top-left-radius: 50px;
+    border-top-right-radius: 100px;
+    border-top-left-radius: 100px;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -64,6 +87,8 @@ const FooterContainer = styled.div`
       display: flex;
       justify-content: center;
       align-items: center;
+      border-top-right-radius: 0;
+      border-top-left-radius: 0;
     }
 
     .top {

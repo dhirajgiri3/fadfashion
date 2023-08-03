@@ -11,10 +11,14 @@ const VidParaContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 2rem;
+  padding: 0 10rem;
   overflow-y: scroll;
   flex-direction: column;
   gap: 3rem;
+
+  @media screen and (max-width: 768px) {
+    padding: 0 1rem;
+  }
 
   &::-webkit-scrollbar {
     display: none;

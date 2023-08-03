@@ -12,12 +12,8 @@ import Form from "@/Component/Home/Form/Form";
 
 const PageContainer = styled.div`
   cursor: auto;
-  padding: 0 10rem;
   overflow-x: hidden;
-
-  @media screen and (max-width: 768px) {
-    padding: 0 1rem;
-  }
+  background: #000;
 `;
 
 function Page() {
