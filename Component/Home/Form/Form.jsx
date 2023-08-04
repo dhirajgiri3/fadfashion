@@ -15,6 +15,7 @@ const FormContainer = styled.div`
   gap: 3rem;
   overflow: hidden;
   font-family: "tenon";
+  letter-spacing: 1px;
 
   @media screen and (max-width: 768px) {
     padding: 3rem 1rem;
@@ -70,12 +71,13 @@ const FormContainer = styled.div`
         font-weight: 700;
         font-size: 1.5rem;
         margin: 1.5rem 0;
+        letter-spacing: 1px;
       }
 
       input {
         width: 70%;
         padding: 1.5rem;
-        border: 1.5px solid #00000020;
+        border: 1.5px solid #00000050;
         border-radius: 100px;
         color: #111;
         transition: all 0.3s ease-in-out;

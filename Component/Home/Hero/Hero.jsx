@@ -15,8 +15,27 @@ const Container = styled.div`
   position: relative;
   z-index: 0;
 
-  @media screen and (max-width: 400px) {
+  @media screen and (max-width: 375px) {
     min-height: 110vh;
+  }
+
+  .icon {
+    position: absolute;
+    cursor: pointer;
+    bottom: -15rem;
+    right: 7rem;
+
+    @media screen and (max-width: 768px) {
+      position: absolute;
+      bottom: -3rem;
+      right: 5rem;
+    }
+
+    @media screen and (max-width: 375px) {
+      position: absolute;
+      bottom: 3rem;
+      right: 5rem;
+    }
   }
 
   video {
@@ -35,8 +54,9 @@ const Container = styled.div`
     left: 0;
     height: 100%;
     width: 100%;
-    background: rgb(0, 0, 0, 0.7);
+    background: rgb(0, 0, 0, 0.8);
     z-index: 2;
+    /* backdrop-filter: blur(10px); */
   }
 
   @media screen and (max-width: 768px) {
@@ -59,16 +79,15 @@ const Container = styled.div`
 
     @media screen and (max-width: 768px) {
       padding: 1rem;
-      margin-top: 15rem;
+      margin-top: 17rem;
       flex-direction: column;
       gap: 5rem;
     }
-
-    .icon {
-      position: absolute;
-      right: 3rem;
-      bottom: 3rem;
-      cursor: pointer;
+    @media screen and (max-width: 375px) {
+      padding: 1rem;
+      margin-top: 12rem;
+      flex-direction: column;
+      gap: 5rem;
     }
 
     .left {
@@ -97,7 +116,7 @@ const Container = styled.div`
         }
 
         span {
-          background-image: linear-gradient(90deg, #8630ff, #ff005c);
+          background-image: linear-gradient(90deg, #ffffff, #ff005c);
           background-size: 100%;
           background-repeat: repeat;
           -webkit-background-clip: text;
@@ -105,8 +124,8 @@ const Container = styled.div`
           -moz-background-clip: text;
           -moz-text-fill-color: transparent;
           font-weight: 100;
-          font-family: "bulleto";
-          font-size: 5rem;
+          font-family: "tenon-bold";
+          font-size: 9rem;
         }
       }
 
@@ -172,14 +191,14 @@ function Hero() {
             <VolumeOffIcon
               style={{
                 color: "#ccc",
-                fontSize: "3rem",
+                fontSize: "2.5rem",
               }}
             />
           ) : (
             <VolumeDownIcon
               style={{
                 color: "#ccc",
-                fontSize: "3rem",
+                fontSize: "2.5rem",
               }}
             />
           )}
@@ -236,11 +255,11 @@ function Hero() {
           <WideButton
             text="Join FAD"
             fontsize="1.5rem"
-            color="#eee"
-            bg="#ffffff00"
+            color="#111"
+            bg="#ffffff"
             hoverbg="#ff005c"
             hovercolor="#fff"
-            bordercolor="#eeeeee50"
+            bordercolor="#fff"
             mpaddingx="4rem"
             mpaddingy="1.2rem"
             mfontsize="1rem"

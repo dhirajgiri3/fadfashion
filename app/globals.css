@@ -51,6 +51,7 @@ html {
 ::-webkit-scrollbar {
   width: 10px;
   background: transparent;
+  cursor: grab;
 }
 
 ::-webkit-scrollbar-thumb {

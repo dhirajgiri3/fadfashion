@@ -29,7 +29,7 @@ const VidParaContainer = styled.div`
     font-size: 5rem;
     text-align: left;
     font-weight: 700;
-    background-image: linear-gradient(45deg, #fff, #ff7fae, #ff005c);
+    background-image: linear-gradient(45deg, #ffffff, #fff, #ffffff);
     background-size: 100%;
     background-repeat: repeat;
     -webkit-background-clip: text;
@@ -87,7 +87,7 @@ function VidPara() {
     <VidParaContainer>
       <h1>Create, Share, and Stay Updated</h1>
       <h3>
-        At FDA, we believe in giving you the power to create and share your
+        At FAD, we believe in giving you the power to create and share your
         fashion sense, knowledge, and skills. Be the influencer you aspire to
         be, showcasing your unique style and inspiring others in the process.
         <span>
@@ -117,7 +117,7 @@ function VidPara() {
             src="https://res.cloudinary.com/divbobkmd/video/upload/v1690758500/fad-reel-1_resize_j910nb.mp4"
           ></motion.video>
         </span>
-        With FDA, you'll never miss a moment in the fashion scene. Stay updated
+        With FAD, you'll never miss a moment in the fashion scene. Stay updated
         with the latest trends, events, and insider knowledge, all in one place.
       </h3>
     </VidParaContainer>

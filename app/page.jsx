@@ -13,6 +13,7 @@ import { gsap } from "gsap";
 
 // Import necessary Intersection Observer libraries
 import { useInView } from "react-intersection-observer";
+import Popup from "@/Component/Home/Popup/Popup";
 
 const PageContainer = styled.div`
   cursor: auto;
@@ -30,34 +31,33 @@ function Page() {
     if (sliderSectionInView) {
       // The slider section is in view, change the background color of the container smoothly
       gsap.to(pageContainers.current, {
-        backgroundColor: "#612683",
-        duration: 0.5,
+        backgroundColor: "#9288F8",
+        duration: 0.3,
         ease: "power2.inOut",
       });
     } else {
       // The slider section is not in view, reset the background color smoothly
       gsap.to(pageContainers.current, {
         backgroundColor: "#101010",
-        duration: 0.5,
+        duration: 0.3,
         ease: "power2.inOut",
       });
     }
   }, [sliderSectionInView]);
-
 
   useEffect(() => {
     if (formSectionInView) {
       // The slider section is in view, change the background color of the container smoothly
       gsap.to(pageContainers.current, {
         backgroundColor: "#fff",
-        duration: 0.5,
+        duration: 0.3,
         ease: "power2.inOut",
       });
     } else {
       // The slider section is not in view, reset the background color smoothly
       gsap.to(pageContainers.current, {
         backgroundColor: "#101010",
-        duration: 0.5,
+        duration: 0.3,
         ease: "power2.inOut",
       });
     }
@@ -71,14 +71,14 @@ function Page() {
       <div className="section video1">
         <Video1 />
       </div>
-      <div className="section imageGrid" ref={sliderSectionRef}>
+      <div className="section imageGrid">
         <ImageGrid />
       </div>
-      <div className="section slider" >
-        <Slider />
-      </div>
-      <div className="section vidparagraph">
+      <div className="section vidparagraph" ref={sliderSectionRef}>
         <VidPara />
+      </div>
+      <div className="section slider">
+        <Slider />
       </div>
       <div className="section form" ref={formSectionRef}>
         <Form />
@@ -86,6 +86,7 @@ function Page() {
       <div className="section footer">
         <Footer />
       </div>
+      <Popup />
     </PageContainer>
   );
 }

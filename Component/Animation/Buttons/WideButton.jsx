@@ -61,7 +61,7 @@ const WideButton = ({
   `;
 
   const Button = styled.button`
-    font-weight: 100;
+    font-weight: 500;
     font-size: ${fontsize};
     text-decoration: none;
     height: ${height};
@@ -76,7 +76,6 @@ const WideButton = ({
     font-family: "tenon";
     background: ${bg};
     border-radius: 500px !important;
-    font-weight: 100;
     white-space: nowrap;
     display: flex;
     align-items: center;
@@ -96,7 +95,6 @@ const WideButton = ({
       position: relative;
       transition: all 0.5s cubic-bezier(0.25, 0.5, 0.75, 1);
       outline: none;
-      font-weight: 100;
 
       &:hover {
         border: 0.5px solid ${hoverbg};

@@ -9,7 +9,7 @@
 :root {
   --color-text: hsl(300deg 33% 99%);
   --color-bg: #101010;
-  --color-link: #5959f3;
+  --color-link: #ff005c;
   --color-link-hover: hsl(300deg 33% 99%);
   --title-gr-1: hsl(240deg 33% 99%);
   --title-gr-2: hsl(263deg 38% 53%);
@@ -191,7 +191,7 @@ body {
   margin: 0;
   font-family: organetto-variable, sans-serif;
   font-size: 5rem;
-  mix-blend-mode: difference;
+  /* mix-blend-mode: difference; */
 
   @media screen and (max-width: 768px) {
     font-size: 3rem;
@@ -202,8 +202,9 @@ body {
 .slider-title__main > span {
   background-image: linear-gradient(
     45deg,
-    var(--title-gr-1),
-    var(--title-gr-2)
+     #fff,
+     #ff80ae,
+     #ff005c
   );
   background-size: 100%;
   background-repeat: repeat;
@@ -217,14 +218,13 @@ body {
   font-weight: 500;
   font-style: normal;
   display: block;
-  mix-blend-mode: difference;
+  /* mix-blend-mode: difference; */
   font-size: 2rem;
   font-family: "kurdasan-heading" !important;
   color: #fff;
 }
 
 .intro-title__main {
-  mix-blend-mode: difference;
   font-size: 10rem !important;
 
   @media screen and (max-width: 768px) {
