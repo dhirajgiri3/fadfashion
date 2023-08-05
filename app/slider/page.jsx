@@ -1,5 +1,6 @@
 "use client";
 
+import Loader1 from "@/Component/Common/Loaders/Loader1";
 import Popup from "@/Component/Home/Popup/Popup";
 import React, { useEffect, useRef } from "react";
 import styled from "styled-components";
@@ -14,6 +15,7 @@ function Video1() {
   return (
     <Video1Container>
       <Popup />
+      <Loader1 />
     </Video1Container>
   );
 }

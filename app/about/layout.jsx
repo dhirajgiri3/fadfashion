@@ -1,8 +1,8 @@
 import Header from "@/Component/Common/Header/Header";
-import "./globals.css";
+import "./../globals.css";
 
 export const metadata = {
-  title: "Home | FAD",
+  title: "About | FAD",
   description:
     "Welcome to Fad, the new era social media platform catering exclusively to Gen-Z. Embrace your passion for fashion sense and a well-maintained lifestyle here. Explore the latest trends, connect with like-minded individuals, and express your unique style. Join Fad, the modern social media platform designed to inspire and empower the fashion-forward generation. Let's discover yourself, set trends, and make meaningful connections. Unleash your creativity and be part of the vibrant community shaping the future of social media for Gen-Z. Sign up now to experience a fashion-focused revolution like never before!",
   keywords:
@@ -18,8 +18,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body >
-        {" "}
+      <body>
         <Header />
         {children}
       </body>

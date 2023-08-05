@@ -16,6 +16,7 @@ const FormContainer = styled.div`
   overflow: hidden;
   font-family: "tenon";
   letter-spacing: 1px;
+  /* background: #fff; */
 
   @media screen and (max-width: 768px) {
     padding: 3rem 1rem;
@@ -46,7 +47,7 @@ const FormContainer = styled.div`
       h1 {
         font-size: 5rem;
         font-weight: 700;
-        color: #111;
+        color: #222;
         margin-bottom: 3rem;
         font-family: "tenon";
         margin: 0 auto;
@@ -66,7 +67,7 @@ const FormContainer = styled.div`
       }
 
       label {
-        color: #111;
+        color: #222;
         font-family: "tenon";
         font-weight: 700;
         font-size: 1.5rem;
@@ -79,13 +80,13 @@ const FormContainer = styled.div`
         padding: 1.5rem;
         border: 1.5px solid #00000050;
         border-radius: 100px;
-        color: #111;
+        color: #222;
         transition: all 0.3s ease-in-out;
         margin-bottom: 3rem;
 
         &:focus {
           outline: none;
-          border: 1.5px solid #111;
+          border: 1.5px solid #222;
         }
 
         @media screen and (max-width: 768px) {
@@ -98,7 +99,7 @@ const FormContainer = styled.div`
         padding: 1rem 2rem;
         border: 1.5px solid #00000020;
         border-radius: 100px;
-        color: #111;
+        color: #222;
         transition: all 0.3s ease-in-out;
         margin-bottom: 4rem;
         margin-top: 1rem;
@@ -112,7 +113,7 @@ const FormContainer = styled.div`
 
         &:focus {
           outline: none;
-          border: 1.5px solid #111;
+          border: 1.5px solid #222;
         }
 
         @media screen and (max-width: 768px) {
@@ -123,7 +124,7 @@ const FormContainer = styled.div`
       button {
         padding: 1.5rem 3rem;
         border-radius: 100px;
-        background: #111;
+        background: #222;
         width: 70%;
         border: none;
         outline: none;
@@ -183,7 +184,7 @@ const FormContainer = styled.div`
       left: 0;
       top: 0;
       z-index: 2;
-      background: rgb(0, 0, 0, 0.1);
+      background: rgb(0, 0, 0, 0.5);
       height: 100%;
       width: 100%;
       cursor: pointer;
@@ -228,7 +229,7 @@ const FormContainer = styled.div`
         -moz-text-fill-color: transparent;
 
         @media screen and (max-width: 768px) {
-          font-size: 8rem;
+          font-size: 6rem;
         }
       }
 

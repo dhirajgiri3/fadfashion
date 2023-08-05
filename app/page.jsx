@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useRef } from "react";
-import Hero from "@/Component/Home/Hero/Hero";
+import Hero2 from "@/Component/Home/Hero/Hero2";
 import ImageGrid from "@/Component/Home/ImageGrid/imageGrid";
 import styled from "styled-components";
 import Slider from "@/Component/Home/Slider/Sliders";
@@ -24,19 +24,18 @@ const PageContainer = styled.div`
 
 function Page() {
   const pageContainers = useRef(null);
-  const [sliderSectionRef, sliderSectionInView] = useInView({ threshold: 0.5 });
-  const [formSectionRef, formSectionInView] = useInView({ threshold: 0.5 });
+  const [sliderSectionRef, sliderSectionInView] = useInView({ threshold: 0.4 });
+  const [formSectionRef, formSectionInView] = useInView({ threshold: 0.4 });
+  const [videoSectionRef, videoSectionInView] = useInView({ threshold: 0.4 });
 
   useEffect(() => {
     if (sliderSectionInView) {
-      // The slider section is in view, change the background color of the container smoothly
       gsap.to(pageContainers.current, {
         backgroundColor: "#9288F8",
         duration: 0.3,
         ease: "power2.inOut",
       });
     } else {
-      // The slider section is not in view, reset the background color smoothly
       gsap.to(pageContainers.current, {
         backgroundColor: "#101010",
         duration: 0.3,
@@ -63,27 +62,46 @@ function Page() {
     }
   }, [formSectionInView]);
 
+  useEffect(() => {
+    if (videoSectionInView) {
+      // The slider section is in view, change the background color of the container smoothly
+      gsap.to(pageContainers.current, {
+        backgroundColor: "#f3cb1b",
+        duration: 0.3,
+        ease: "power2.inOut",
+      });
+    } else {
+      // The slider section is not in view, reset the background color smoothly
+      gsap.to(pageContainers.current, {
+        backgroundColor: "#101010",
+        duration: 0.3,
+        ease: "power2.inOut",
+      });
+    }
+  }, [videoSectionInView]);
+
   return (
     <PageContainer ref={pageContainers}>
       <div className="section hero">
-        <Hero />
-      </div>
-      <div className="section video1">
-        <Video1 />
-      </div>
-      <div className="section imageGrid">
-        <ImageGrid />
+        <Hero2 />
       </div>
       <div className="section vidparagraph" ref={sliderSectionRef}>
         <VidPara />
       </div>
-      <div className="section slider">
+      <div className="section slider" id="slider">
         <Slider />
       </div>
-      <div className="section form" ref={formSectionRef}>
+      <div className="section video1" ref={videoSectionRef}>
+        <Video1 />
+      </div>
+      <div className="section imageGrid" id="imagegrid">
+        <ImageGrid />
+      </div>
+
+      <div className="section form" id="form" ref={formSectionRef}>
         <Form />
       </div>
-      <div className="section footer">
+      <div className="section footer" id="footer">
         <Footer />
       </div>
       <Popup />

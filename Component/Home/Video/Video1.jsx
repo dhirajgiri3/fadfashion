@@ -20,10 +20,10 @@ const Video1Container = styled.div`
   }
 
   video {
-    height: 95vh;
-    width: 100vw;
+    height: 90vh;
+    width: 100%;
     object-fit: cover;
-    border-radius: 50px;
+    border-radius: 500px;
     cursor: pointer;
     display: flex;
     justify-content: center;

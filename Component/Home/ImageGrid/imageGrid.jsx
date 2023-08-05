@@ -356,7 +356,7 @@ const ImageGrid = () => {
         </h2>
         <span className="intro-title__sub oh">
           <span className="oh__inner">
-            Introducing Fad, The Ultimate Fashion Community Platform!
+            Join Fad, The Ultimate Fashion Community Platform!
           </span>
         </span>
       </div>

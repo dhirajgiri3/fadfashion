@@ -40,21 +40,16 @@ function ImageScaleAnime({ imgUrl, iPhoneRef }) {
     const state = Flip.getState(items);
     const tl = gsap.timeline({ repeat: -1 });
 
-    tl.to(
-      items,
-      {
-        duration: 3,
-        stagger: 0.1,
-        ease: "power2.inOut",
-        scale: 1.2,
-        rotate: 360,
-        yoyo: true,
-        yoyoEase: true,
-        repeat: -1,
-        repeatDelay: 3,
-      },
-      0 // Set the time position to 0 for this animation
-    );
+    tl.to(items, {
+      duration: 2,
+      stagger: 0.2,
+      ease: "power2.inOut",
+      scale: 1.3,
+      // rotate: 360,
+      yoyo: true,
+      yoyoEase: true,
+      repeat: -1,
+    });
   }, []);
 
   return (

@@ -6,6 +6,7 @@ import logo from "@/Assets/Images/logo.png";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import style from "./(css)/Header.module.css";
+import WideButton from "@/Component/Animation/Buttons/WideButton";
 
 function Header() {
   return (
@@ -32,11 +33,25 @@ function Header() {
         <Link className={style.a} href="/">
           Home
         </Link>
-        <Link className={style.a} href="/">
-          Who We Are?
+        <Link className={style.a} href="/about">
+          what is FAD?
         </Link>
-        <Link className={style.a} href="/">
-          Contact Us
+        <Link className={style.a} href="#form">
+          <WideButton
+            text="Join FAD"
+            fontsize="1.5rem"
+            color="#fff"
+            hoverbg="#ffffff"
+            bg="#ff005c"
+            hovercolor="#111"
+            bordercolor="#ff005c"
+            mpaddingx="4rem"
+            mpaddingy="1.2rem"
+            mfontsize="1rem"
+            title="Join Fad"
+            height="4.5rem"
+            width="12rem"
+          />
         </Link>
       </div>
     </motion.div>

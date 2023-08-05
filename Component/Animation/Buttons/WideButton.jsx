@@ -90,7 +90,7 @@ const WideButton = ({
 
     &.c-button--gooey {
       color: ${color};
-      letter-spacing: 1.5px;
+      letter-spacing: .5px;
       border: 0.5px solid ${bordercolor};
       position: relative;
       transition: all 0.5s cubic-bezier(0.25, 0.5, 0.75, 1);

@@ -35,6 +35,7 @@ body {
 
   @media screen and (max-width: 768px) {
     padding: 0 1rem;
+    margin-top: 5rem;
   }
 }
 
@@ -71,7 +72,7 @@ body {
 }
 
 .intro-grid--images {
-  padding-top: 3rem;
+  padding-top: 5rem;
   height: 100vh;
 }
 
@@ -200,12 +201,7 @@ body {
 
 .intro-title__main > span,
 .slider-title__main > span {
-  background-image: linear-gradient(
-    45deg,
-     #fff,
-     #ff80ae,
-     #ff005c
-  );
+  background-image: linear-gradient(45deg, #fff, #ff80ae, #ff005c);
   background-size: 100%;
   background-repeat: repeat;
   -webkit-background-clip: text;
