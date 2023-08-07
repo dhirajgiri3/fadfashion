@@ -59,6 +59,11 @@ const Hero2Container = styled.div`
     margin-bottom: 5rem;
     padding: 0 10rem;
 
+    @media screen and (max-width: 1000px) {
+      padding: 0 5rem;
+      margin-bottom: 5rem;
+    }
+
     @media screen and (max-width: 768px) {
       padding: 0 1rem;
       margin-bottom: 3rem;
@@ -164,10 +169,18 @@ const Hero2Container = styled.div`
             width: 40%;
             font-size: 1.3rem;
             color: #ffffff;
-            backdrop-filter: blur(10px);
             font-weight: 500;
             display: flex;
             flex-direction: column;
+            letter-spacing: 0.5px;
+
+            @media screen and (max-width: 1000px) {
+              width: 75%;
+              font-size: 1.5rem;
+              border-radius: 0px;
+              padding: 0;
+              background: transparent;
+            }
 
             @media screen and (max-width: 768px) {
               width: 100%;
@@ -175,7 +188,6 @@ const Hero2Container = styled.div`
               border-radius: 0px;
               padding: 0;
               background: transparent;
-              backdrop-filter: blur(0);
             }
           }
         }
@@ -236,10 +248,11 @@ function Hero2() {
                   bg="#ff005c"
                   hovercolor="#111"
                   bordercolor="#ff005c"
-                  mfontsize="1rem"
+                  mfontsize="1.5rem"
                   title="Join Fad"
                   height="4.5rem"
                   width="15rem"
+                  mwidth="16rem"
                 />
               </Link>
               <Link href="/about">

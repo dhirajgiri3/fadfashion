@@ -34,6 +34,11 @@ const PopupContainer = styled(motion.div)`
       height: 80vh;
     }
 
+    @media screen and (max-width: 1000px) {
+      width: 80%;
+      height: 60vh;
+    }
+
     .cls {
       width: 100%;
       font-family: "tenon";
@@ -49,6 +54,11 @@ const PopupContainer = styled(motion.div)`
 
       &:hover {
         color: #111;
+      }
+
+      @media screen and (max-width: 1000px) {
+        height: 10vh;
+        margin-right: 5rem;
       }
     }
 

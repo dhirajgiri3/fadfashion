@@ -14,6 +14,7 @@ import { gsap } from "gsap";
 // Import necessary Intersection Observer libraries
 import { useInView } from "react-intersection-observer";
 import Popup from "@/Component/Home/Popup/Popup";
+import Header from "@/Component/Common/Header/Header";
 
 const PageContainer = styled.div`
   cursor: auto;
@@ -66,7 +67,7 @@ function Page() {
     if (videoSectionInView) {
       // The slider section is in view, change the background color of the container smoothly
       gsap.to(pageContainers.current, {
-        backgroundColor: "#f3cb1b",
+        backgroundColor: "#FEBBCC",
         duration: 0.3,
         ease: "power2.inOut",
       });
@@ -81,31 +82,34 @@ function Page() {
   }, [videoSectionInView]);
 
   return (
-    <PageContainer ref={pageContainers}>
-      <div className="section hero">
-        <Hero2 />
-      </div>
-      <div className="section vidparagraph" ref={sliderSectionRef}>
-        <VidPara />
-      </div>
-      <div className="section slider" id="slider">
-        <Slider />
-      </div>
-      <div className="section video1" ref={videoSectionRef}>
-        <Video1 />
-      </div>
-      <div className="section imageGrid" id="imagegrid">
-        <ImageGrid />
-      </div>
+    <>
+      <Header />
+      <PageContainer ref={pageContainers}>
+        <div className="section hero">
+          <Hero2 />
+        </div>
+        <div className="section vidparagraph" ref={sliderSectionRef}>
+          <VidPara />
+        </div>
+        <div className="section slider" id="slider">
+          <Slider />
+        </div>
+        <div className="section video1" ref={videoSectionRef}>
+          <Video1 />
+        </div>
+        <div className="section imageGrid" id="imagegrid">
+          <ImageGrid />
+        </div>
 
-      <div className="section form" id="form" ref={formSectionRef}>
-        <Form />
-      </div>
-      <div className="section footer" id="footer">
-        <Footer />
-      </div>
-      <Popup />
-    </PageContainer>
+        <div className="section form" id="form" ref={formSectionRef}>
+          <Form />
+        </div>
+        <div className="section footer" id="footer">
+          <Footer />
+        </div>
+        <Popup />
+      </PageContainer>
+    </>
   );
 }
 

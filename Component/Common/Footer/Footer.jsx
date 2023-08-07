@@ -14,18 +14,25 @@ const FooterContainer = styled.div`
   width: calc(100% - 10rem);
   height: 85vh;
   z-index: 0;
-  margin: 0 5rem;
+  margin: 0 auto;
   margin-top: 5rem;
 
+  @media screen and (max-width: 1000px) {
+    min-height: 50vh;
+    height: 100%;
+    width: 100%;
+    margin-top: 0;
+  }
   @media screen and (max-width: 768px) {
     min-height: 80vh;
+    height: 100%;
     width: 100%;
-    margin: 0;
     margin-top: 0;
   }
 
   @media screen and (max-width: 400px) {
     min-height: 95vh;
+    height: 100%;
     width: 100%;
     margin: 0;
     margin-top: 0;

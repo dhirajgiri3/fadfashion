@@ -33,6 +33,11 @@ body {
   overflow-x: hidden;
   padding: 0 10rem;
 
+  @media screen and (max-width: 1000px) {
+    padding: 0 5rem;
+    margin-top: 5rem;
+  }
+
   @media screen and (max-width: 768px) {
     padding: 0 1rem;
     margin-top: 5rem;
@@ -302,7 +307,7 @@ body {
   opacity: 0;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1000px) {
   .frame {
     position: fixed;
     height: 100vh;

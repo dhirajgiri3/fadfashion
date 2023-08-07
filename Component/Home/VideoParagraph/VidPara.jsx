@@ -16,6 +16,11 @@ const VidParaContainer = styled.div`
   flex-direction: column;
   gap: 3rem;
 
+
+  @media screen and (max-width: 1000px) {
+    padding: 0 5rem;
+  }
+
   @media screen and (max-width: 768px) {
     padding: 0 1rem;
   }

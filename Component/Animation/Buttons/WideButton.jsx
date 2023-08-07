@@ -81,7 +81,7 @@ const WideButton = ({
     align-items: center;
     justify-content: center;
 
-    @media (max-width: 768px) {
+    @media (max-width: 1000px) {
       padding: ${mpaddingy} ${mpaddingx};
       font-size: ${mfontsize};
       height: ${mheight};

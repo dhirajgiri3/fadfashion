@@ -16,7 +16,13 @@ const FormContainer = styled.div`
   overflow: hidden;
   font-family: "tenon";
   letter-spacing: 1px;
-  /* background: #fff; */
+
+  @media screen and (max-width: 1000px) {
+    padding: 3rem 1rem;
+    flex-direction: column-reverse;
+    min-height: 100vh;
+    height: 100%;
+  }
 
   @media screen and (max-width: 768px) {
     padding: 3rem 1rem;
@@ -29,9 +35,9 @@ const FormContainer = styled.div`
     width: 50%;
     height: 100%;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1000px) {
       width: 100%;
-      margin: 3rem 0;
+      margin: 3rem auto;
     }
 
     .heading {
@@ -39,7 +45,7 @@ const FormContainer = styled.div`
       height: 100%;
       margin-bottom: 3rem;
 
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 1000px) {
         display: grid;
         place-items: center;
       }
@@ -62,7 +68,7 @@ const FormContainer = styled.div`
       justify-content: center;
       align-items: flex-start;
 
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 1000px) {
         align-items: center;
       }
 
@@ -155,6 +161,12 @@ const FormContainer = styled.div`
     z-index: 0;
     height: 90vh;
 
+    @media screen and (max-width: 1000px) {
+      width: 90%;
+      height: 80vh;
+      margin-bottom: 5rem;
+    }
+
     @media screen and (max-width: 768px) {
       width: 100%;
       height: 80vh;
@@ -243,9 +255,9 @@ const FormContainer = styled.div`
         margin-left: 0;
         color: #ccc;
 
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 1000px) {
           font-size: 2rem;
-          width: 100%;
+          width: 90%;
         }
       }
     }

@@ -1,11 +1,7 @@
 import React, { useState, useRef } from "react";
 import styled from "styled-components";
 import WideButton from "@/Component/Animation/Buttons/WideButton";
-import { gsap } from "gsap";
 import { motion } from "framer-motion";
-import VolumeDownIcon from "@mui/icons-material/VolumeDown";
-import VolumeOffIcon from "@mui/icons-material/VolumeOff";
-import Image from "next/image";
 import EastIcon from "@mui/icons-material/East";
 import Link from "next/link";
 
@@ -31,14 +27,14 @@ const Container = styled.div`
   .left {
     display: flex;
     width: 75%;
-    margin-top: 15vh;
+    padding-top: 15vh;
     position: relative;
     z-index: 0;
     height: 83vh;
 
     @media screen and (max-width: 768px) {
       width: 100%;
-      margin-top: 20vh;
+      padding-top: 20vh;
       height: 75vh;
     }
 

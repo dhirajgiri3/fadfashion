@@ -7,7 +7,7 @@ import ImageScaleAnime from "@/Component/Animation/ImageScaleAnime";
 const Loader1Container = styled.div`
   height: 100vh;
   width: 100%;
-  background: #151515;
+  background: #ffffff;
   position: fixed;
   z-index: 99998;
   top: 0;
@@ -35,30 +35,26 @@ function Loader1() {
     const container = containerRef.current;
     const overlay = overlayRef.current;
 
-    // Hide the overlay with a bounce animation
     gsap.to(overlay, {
       width: 0,
       duration: 1,
       ease: "power4.inOut",
-      delay: .5,
+      delay: 0.5,
       transformOrigin: "center",
     });
 
     gsap.to(container, {
       width: 0,
-      duration: 2.5,
+      duration: 1,
       ease: "power4.inOut",
-      delay: 1.5,
+      delay: 1,
       transformOrigin: "center",
-      // yoyo: true,
-      // yoyoEase: "easeInOut",
-      // repeat: -1,
     });
   }, []);
 
   return (
     <Loader1Container ref={containerRef}>
-      <ImageScaleAnime imgUrl={svg1} />
+      {/* <ImageScaleAnime imgUrl={svg1} /> */}
       <div className="overlay" ref={overlayRef}></div>
     </Loader1Container>
   );

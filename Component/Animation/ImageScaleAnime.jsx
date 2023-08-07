@@ -10,41 +10,16 @@ import Image from "next/image";
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(Flip);
 
-const AboutContainer = styled.div`
-  position: relative;
-  padding: 1rem;
-  width: 20vw;
-  height: calc(55vh * 1.2);
-
-  @media screen and (max-width: 768px) {
-    width: 70vw;
-    margin-top: 3rem;
-  }
-
-  .images {
-    position: relative;
-
-    .svg {
-      width: 100%;
-      position: absolute;
-      transition: scale 0.5s ease-in-out;
-      object-fit: contain;
-      height: 55vh;
-    }
-  }
-`;
-
-function ImageScaleAnime({ imgUrl, iPhoneRef }) {
+function ImageScaleAnime({ imgUrl, height, mheight, theight }) {
   useEffect(() => {
     const items = gsap.utils.toArray(".svg");
-    const state = Flip.getState(items);
     const tl = gsap.timeline({ repeat: -1 });
 
     tl.to(items, {
       duration: 2,
       stagger: 0.2,
       ease: "power2.inOut",
-      scale: 1.3,
+      scale: 1.1,
       // rotate: 360,
       yoyo: true,
       yoyoEase: true,
@@ -52,9 +27,37 @@ function ImageScaleAnime({ imgUrl, iPhoneRef }) {
     });
   }, []);
 
+  const AboutContainer = styled.div`
+    position: relative;
+    padding: 1rem;
+    width: 20vw;
+    height: calc(55vh * 1.1);
+
+    @media screen and (max-width: 1000px) {
+      width: 70vw;
+      margin-top: 3rem;
+    }
+
+    .images {
+      position: relative;
+
+      .svg {
+        width: 100%;
+        position: absolute;
+        transition: scale 0.5s ease-in-out;
+        object-fit: contain;
+        height: 70vh;
+
+        @media screen and (max-width: 1000px) {
+          height: 55vh;
+        }
+      }
+    }
+  `;
+
   return (
     <AboutContainer className="container">
-      <div className="images" ref={iPhoneRef}>
+      <div className="images">
         <div className="img1">
           <Image src={imgUrl} alt="svg1" className="svg svg1" />
         </div>

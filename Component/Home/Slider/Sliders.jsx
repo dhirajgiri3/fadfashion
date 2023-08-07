@@ -36,10 +36,16 @@ const SliderContainer = styled.div`
   height: 100vh;
   justify-content: center;
   align-items: center;
-  padding: 10rem;
+  padding: 0 10rem;
+
+  @media screen and (max-width: 1000px) {
+    flex-direction: column;
+    padding: 0 5rem;
+  }
 
   @media screen and (max-width: 768px) {
     flex-direction: column;
+    padding: 0 1rem;
   }
 `;
 
@@ -53,7 +59,7 @@ const ImageContainer = styled.div`
   justify-content: center;
   align-items: center;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1000px) {
     height: 50vh;
     width: 87vw;
   }
@@ -85,7 +91,7 @@ const Buttons = styled.div`
   width: 40vw;
   gap: 3rem;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1000px) {
     width: 85vw;
   }
 `;
@@ -101,6 +107,13 @@ const ButtonDiv = styled.div`
   justify-content: center;
   align-items: center;
   border-radius: 100px;
+
+  @media (max-width: 1000px) {
+    background: transparent;
+    padding: 0;
+    margin: 0;
+    height: 50%;
+  }
 
   @media (max-width: 768px) {
     background: transparent;
@@ -129,6 +142,16 @@ const Content = styled.div`
     margin: 0 auto;
     height: 20vh;
     background: #131313;
+    padding: 1.5rem;
+    border-radius: 20px;
+    overflow: hidden;
+    overflow-y: scroll;
+  }
+
+  @media (max-width: 1000px) {
+    width: 85%;
+    margin: 0 auto;
+    height: 20vh;
     padding: 1.5rem;
     border-radius: 20px;
     overflow: hidden;
