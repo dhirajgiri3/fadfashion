@@ -78,6 +78,7 @@ function First() {
         flex-direction: column;
         font-family: "tenon";
         line-height: 0.9;
+        mix-blend-mode: difference;
 
         @media screen and (max-width: 1000px) {
           font-size: 10rem;

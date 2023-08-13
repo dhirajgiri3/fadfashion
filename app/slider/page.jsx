@@ -1,127 +1,99 @@
 "use client";
 
-import ImageScaleAnime from "@/Component/Animation/ImageScaleAnime";
-import React, { useEffect, useRef } from "react";
+import React from "react";
+import { motion } from "framer-motion";
 import styled from "styled-components";
-import svg1 from "@/Assets/Images/iPhone 15-1.svg";
+import { useInView } from "react-intersection-observer";
 
-const Video1Container = styled.div`
-  position: relative;
-  width: 100%;
-  height: 100vh;
+const SplitReveal = () => {
+  const text = `
+    FAD isn't just a fleeting trend,
+    It's a fashion realm where talents ascend.
+    A social platform where styles take flight,
+    And creativity sparkles with pure delight.
+  
+    Unleash your passion, break every chain,
+    In this vibrant community's terrain.
+    Express without judgment, be your own star,
+    Fashion's playground, no limits to how far.
+  
+    Connect with fashionistas, a global array,
+    Learn from innovators, in your own way.
+    A revolutionary blend of fashion and more,
+    A social haven where talents galore.
+  
+    Earn for your skills, your art on display,
+    A true trendsetter, come what may.
+    FAD's purpose is clear, a pathway so grand,
+    To turn your love for fashion into something grand.
+  
+    Revolutionizing the social media sphere,
+    Where fashion's the language, loud and clear.
+    Join the movement, seize the stage,
+    Let your style and skills engage.
+  
+    In the Fashion Odyssey, a world so divine,
+    FAD creates magic, let your talent shine.
+    Come, embrace this platform, trend and friend,
+    FAD, where your fashion journey knows no end.
+  `;
 
-  .content {
-    height: 100vh;
-    display: grid;
-    grid-template-rows: 9fr 1fr;
+  const letters = text.split("");
+  const [ref, inView] = useInView({
+    threshold: 0.5,
+    triggerOnce: true,
+  });
 
-    @media screen and (max-width: 1000px) {
-      grid-template-rows: 8fr 2fr;
+  const Container = styled.div`
+    width: 100%;
+    height: 200vh;
+
+    span {
+      font-size: 1rem;
+      color: #fff;
+      line-height: 1.5;
+      letter-spacing: 0.5px;
+      font-weight: 300;
     }
-    .top {
-      display: grid;
-      grid-template-columns: 1fr 3fr 1fr;
-      background: #dac;
+  `;
 
-      @media screen and (max-width: 1000px) {
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 7fr 1fr;
-      }
+  const animationVariants = {
+    visible: { opacity: 1, y: 0 },
+    hidden: { opacity: 0, y: 20 },
+  };
 
-      .left {
-        display: grid;
-        grid-template-rows: 1fr 1fr 1fr;
-        background: #00f;
+  const transition = {
+    duration: 0.3,
+    delay: 0.03,
+    ease: "easeInOut",
+  };
 
-        @media screen and (max-width: 1000px) {
-          grid-template-columns: 1fr 1fr 1fr;
-          grid-template-rows: 1fr;
-        }
-        .top {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          background: #00f;
-        }
-
-        .mid {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-        .bottom {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-      }
-      .mid {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      .right {
-        display: grid;
-        grid-template-rows: 1fr 1fr 1fr;
-        background: #00f;
-
-        @media screen and (max-width: 1000px) {
-          grid-template-columns: 1fr 1fr 1fr;
-          grid-template-rows: 1fr;
-        }
-
-        .top {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          background: #00f;
-        }
-
-        .mid {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-        .bottom {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-      }
-    }
-
-    .bottom {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-  }
-`;
-
-function Video1() {
   return (
-    <Video1Container>
-      <div className="content">
-        <div className="top">
-          <div className="left">
-            <div className="top">top</div>
-            <div className="mid">mid</div>
-            <div className="bottom">bottom</div>
-          </div>
-          <div className="mid">
-            {" "}
-            <ImageScaleAnime imgUrl={svg1} />
-          </div>
-          <div className="right">
-            <div className="top">top</div>
-            <div className="mid">mid</div>
-            <div className="bottom">bottom</div>
-          </div>
-        </div>
-        <div className="bottom">bottom</div>
-      </div>
-    </Video1Container>
+    <div ref={ref}>
+      <Container>
+        {letters.map((letter, index) => (
+          <motion.span
+            key={index}
+            initial={animationVariants.hidden}
+            animate={
+              inView ? animationVariants.visible : animationVariants.hidden
+            }
+            transition={{
+              ...transition,
+              delay: index * transition.delay,
+            }}
+            style={{
+              opacity: inView ? 1 : 0,
+              transform: inView ? "translateY(0)" : "translateY(20px)",
+            }}
+          >
+            {letter === "\n" ? <br /> : letter}
+          </motion.span>
+        ))}
+      </Container>
+    </div>
   );
-}
+};
 
-export default Video1;
+export default SplitReveal;
+
