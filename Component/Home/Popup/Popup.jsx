@@ -29,14 +29,16 @@ const PopupContainer = styled(motion.div)`
     justify-content: center;
     align-items: center;
 
-    @media screen and (max-width: 768px) {
-      width: 90%;
-      height: 80vh;
-    }
+
 
     @media screen and (max-width: 1000px) {
       width: 80%;
       height: 60vh;
+    }
+
+    @media screen and (max-width: 768px) {
+      width: 90%;
+      height: 80vh;
     }
 
     .cls {

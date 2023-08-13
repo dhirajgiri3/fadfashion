@@ -64,9 +64,17 @@ function Page() {
         text-align: center;
         font-weight: 500;
 
+        @media screen and (max-width: 1000px) {
+          font-size: 5rem;
+        }
+
+        @media screen and (max-width: 768px) {
+          font-size: 3rem;
+        }
+
         span {
           color: #ff005c;
-          font-family: 'kurdasan';
+          font-family: "kurdasan";
           font-weight: 100;
         }
       }
@@ -98,7 +106,6 @@ function Page() {
                 for expressing your <span> passion for fashion</span> and
                 emerging trends.
               </h1>
-              
             </div>
             <div className="footer">
               <Footer />
