@@ -239,7 +239,7 @@ function Hero2() {
           </div>
           <div className="bottom">
             <div className="bleft">
-              <Link href="#form">
+              <Link href="/howfadworks">
                 <WideButton
                   text="How FAD works?"
                   fontsize="1.5rem"

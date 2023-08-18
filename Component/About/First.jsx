@@ -140,14 +140,13 @@ function First() {
   `;
 
   const variants = {
-    hidden: { opacity: 0, x: 100 },
+    hidden: { opacity: 0, y: 100 },
     visible: {
       opacity: 1,
-      x: 0,
+      y: 0,
       transition: {
         duration: 0.5,
         ease: "easeInOut",
-        // type: "spring",
         stiffness: 100,
         damping: 5,
       },
@@ -160,7 +159,7 @@ function First() {
         <motion.div
           variants={variants}
           initial="hidden"
-          animate="visible"
+          whileInView="visible"
           className="left"
         >
           <p>
@@ -171,7 +170,7 @@ function First() {
         <motion.div
           variants={variants}
           initial="hidden"
-          animate="visible"
+          whileInView="visible"
           className="mid"
         >
           The <h6>Insider</h6> Look
@@ -179,7 +178,7 @@ function First() {
         <motion.div
           variants={variants}
           initial="hidden"
-          animate="visible"
+          whileInView="visible"
           className="right"
         >
           <p>

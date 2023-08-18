@@ -280,10 +280,10 @@ function Second() {
   `;
 
   const variants = {
-    hidden: { opacity: 0, x: 100 },
+    hidden: { opacity: 0, y: 100 },
     visible: {
       opacity: 1,
-      x: 0,
+      y: 0,
       transition: {
         duration: 1,
         ease: "easeInOut",
@@ -298,53 +298,98 @@ function Second() {
       <div className="content">
         <div className="top">
           <div className="left">
-            <div className="top">
+            <motion.div
+              variants={variants}
+              initial="hidden"
+              whileInView="visible"
+              className="top"
+            >
               <p>
                 {" "}
                 show your funky sense of fashion to people and learn about
                 fashion and do everything fashion without being judged.
               </p>
-            </div>
-            <div className="mid">
+            </motion.div>
+            <motion.div
+              variants={variants}
+              initial="hidden"
+              whileInView="visible"
+              className="mid"
+            >
               <Image src={svg3} alt="Fad-about-image" />
-            </div>
-            <div className="bottom">
+            </motion.div>
+            <motion.div
+              variants={variants}
+              initial="hidden"
+              whileInView="visible"
+              className="bottom"
+            >
               {" "}
               <p>
                 {" "}
                 show your funky sense of fashion to people and learn about
                 fashion and do everything fashion without being judged.
               </p>
-            </div>
+            </motion.div>
           </div>
-          <div className="mid">
+          <motion.div
+            variants={variants}
+            initial="hidden"
+            whileInView="visible"
+            className="mid"
+          >
             <ImageScaleAnime imgUrl={svg1} />
-          </div>
+          </motion.div>
           <div className="right">
-            <div className="top">
+            <motion.div
+              variants={variants}
+              initial="hidden"
+              whileInView="visible"
+              className="top"
+            >
               <Image src={fad4} alt="Fad-about-image" />
-            </div>
-            <div className="mid">
+            </motion.div>
+            <motion.div
+              variants={variants}
+              initial="hidden"
+              whileInView="visible"
+              className="mid"
+            >
               {" "}
               show your funky sense of fashion to people and learn about fashion
               and do everything fashion without being judged.
-            </div>
-            <div className="bottom">
+            </motion.div>
+            <motion.div
+              variants={variants}
+              initial="hidden"
+              whileInView="visible"
+              className="bottom"
+            >
               <Image src={svg2} alt="Fad-about-image" />
-            </div>
+            </motion.div>
           </div>
         </div>
         <div className="bottom">
           <h1>We are launching our app very soon ...</h1>
           <div className="icons">
-            <div className="playstore">
+            <motion.div
+              variants={variants}
+              initial="hidden"
+              whileInView="visible"
+              className="playstore"
+            >
               <Image src={playstore} alt="playstore" />
               <h3>Play Store</h3>
-            </div>
-            <div className="applestore">
+            </motion.div>
+            <motion.div
+              variants={variants}
+              initial="hidden"
+              whileInView="visible"
+              className="applestore"
+            >
               <Image src={applestore} alt="app store" />
               <h3>App Store</h3>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
