@@ -20,6 +20,7 @@ const Container = styled.div`
   justify-content: center;
   align-items: flex-start;
   gap: 10rem;
+  overflow-x: hidden;
 
   @media screen and (max-width: 1000px) {
     padding: 0 5rem;
