@@ -200,6 +200,10 @@ const FadfabsquadFirstContainer = styled.div`
       padding: 0 1rem;
       top: 3rem;
     }
+    @media screen and (max-width: 376px) {
+      padding: 0 1rem;
+      top: 0rem;
+    }
 
     h1 {
       font-size: 10rem;
@@ -220,7 +224,7 @@ function FirstSection() {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.5,
+        duration: 1,
         ease: "easeInOut",
         stiffness: 100,
         damping: 5,
@@ -230,14 +234,16 @@ function FirstSection() {
 
   return (
     <FadfabsquadFirstContainer>
-      <div className="bg"></div>
+      <motion.div className="bg"></motion.div>
       <div className="overlay"></div>
       <div className="content">
         <div className="left">
-          <p>FAD &rarr; FadFabSquad</p>
+          <motion.p variants={variants} initial="hidden" whileInView="visible">
+            FAD &rarr; FadFabSquad
+          </motion.p>
         </div>
         <div className="mid">
-          <p>
+          <motion.p variants={variants} initial="hidden" whileInView="visible">
             FadFabSquad is a premium influencer program created by Fad,
             specially crafted for fashion enthusiasts like you who are
             passionate about fashion and content creation. This is your chance
@@ -250,15 +256,19 @@ function FirstSection() {
             social media platforms. It provides a community of like-minded
             fashion influencers who can support and motivate each other to reach
             their goals.
-          </p>
+          </motion.p>
         </div>
         <div className="right"></div>
         <div className="right2">
-          <h3>Empowering Fashion Influencers with FadFabSquad</h3>
+          <motion.h3 variants={variants} initial="hidden" whileInView="visible">
+            Empowering Fashion Influencers with FadFabSquad
+          </motion.h3>
         </div>
       </div>
       <div className="top">
-        <h1>What is FadFabSquad?</h1>
+        <motion.h1 variants={variants} initial="hidden" whileInView="visible">
+          What is FadFabSquad?
+        </motion.h1>
       </div>
     </FadfabsquadFirstContainer>
   );

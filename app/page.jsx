@@ -32,7 +32,7 @@ function Page() {
   useEffect(() => {
     if (sliderSectionInView) {
       gsap.to(pageContainers.current, {
-        backgroundColor: "#555",
+        backgroundColor: "#4E3636",
         duration: 0.3,
         ease: "power2.inOut",
       });
