@@ -1,4 +1,4 @@
-import Header from "@/Component/Common/Header/Header";
+import React from "react";
 import "./../globals.css";
 
 export const metadata = {
@@ -18,10 +18,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>
-        <Header />
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   );
 }

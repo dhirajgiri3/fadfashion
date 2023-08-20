@@ -1,99 +1,185 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
 import styled from "styled-components";
-import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
 
-const SplitReveal = () => {
-  const text = `
-    FAD isn't just a fleeting trend,
-    It's a fashion realm where talents ascend.
-    A social platform where styles take flight,
-    And creativity sparkles with pure delight.
-  
-    Unleash your passion, break every chain,
-    In this vibrant community's terrain.
-    Express without judgment, be your own star,
-    Fashion's playground, no limits to how far.
-  
-    Connect with fashionistas, a global array,
-    Learn from innovators, in your own way.
-    A revolutionary blend of fashion and more,
-    A social haven where talents galore.
-  
-    Earn for your skills, your art on display,
-    A true trendsetter, come what may.
-    FAD's purpose is clear, a pathway so grand,
-    To turn your love for fashion into something grand.
-  
-    Revolutionizing the social media sphere,
-    Where fashion's the language, loud and clear.
-    Join the movement, seize the stage,
-    Let your style and skills engage.
-  
-    In the Fashion Odyssey, a world so divine,
-    FAD creates magic, let your talent shine.
-    Come, embrace this platform, trend and friend,
-    FAD, where your fashion journey knows no end.
-  `;
+const TimelineContainer = styled.div`
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  background: #101010;
+`;
 
-  const letters = text.split("");
-  const [ref, inView] = useInView({
-    threshold: 0.5,
-    triggerOnce: true,
-  });
+const Timeline = styled.div`
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
 
-  const Container = styled.div`
-    width: 100%;
-    height: 200vh;
+  &::after {
+    content: "";
+    position: absolute;
+    width: 5px;
+    background-color: #fff;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+    border-radius: 100px;
+  }
+`;
 
-    span {
-      font-size: 1rem;
-      color: #fff;
-      line-height: 1.5;
-      letter-spacing: 0.5px;
-      font-weight: 300;
+const TimelineItem = styled(motion.div)`
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 27px;
+    height: 27px;
+    right: -19px;
+    background-color: #8f0034;
+    border: 2px solid #fff;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+  }
+
+  ${(props) =>
+    props.isRight
+      ? `
+    left: 50%;
+    &::before {
+      content: " ";
+      height: 0;
+      position: absolute;
+      top: 22px;
+      width: 0;
+      z-index: 1;
+      left: 30px;
+      border: medium solid #8f0034;
+      border-width: 10px 10px 10px 0;
+      border-color: transparent #8f0034 transparent transparent;
     }
-  `;
+    &::after {
+      right: auto;
+      left: -17px;
+    }
+  `
+      : `
+    &::before {
+      content: " ";
+      height: 0;
+      position: absolute;
+      top: 22px;
+      width: 0;
+      z-index: 1;
+      right: 30px;
+      border: medium solid #8f0034;
+      border-width: 10px 0 10px 10px;
+      border-color: transparent transparent transparent #8f0034;
+    }
+    &::after {
+      left: auto;
+      right: -17px;
+    }
+  `}
 
-  const animationVariants = {
-    visible: { opacity: 1, y: 0 },
-    hidden: { opacity: 0, y: 20 },
-  };
+  @media screen and (max-width : 768px) {
+    padding: 10px;
+  }
+`;
 
-  const transition = {
-    duration: 0.3,
-    delay: 0.03,
-    ease: "easeInOut",
-  };
+const Content = styled.div`
+  padding: 20px;
+  background-color: #8f0034;
+  position: relative;
+  border-radius: 20px;
+  color: #eee;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
+  gap: 1rem;
 
+  h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    font-family: "tenon";
+  }
+
+  p {
+    font-size: 1.3rem;
+    font-weight: 400;
+    font-family: "tenon";
+    letter-spacing: 0.5px;
+    line-height: 1.3;
+    color: #ffdde9;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 10px;
+    gap: 0.5rem;
+
+    h2 {
+      font-size: 1.5rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+  }
+`;
+
+const timelineItems = [
+  {
+    title: "Step I : Apply to Join",
+    content:
+      "Fill out our application form and tell us why you're the perfect fit for the FadFab Squad. We'll review your application and let you know if you're selected.",
+  },
+  {
+    title: "Step II : Verdict",
+    content:
+      "If you're selected, you'll receive an email for the same, containing more info about the program. Ask any questions you may have about the FadFab Squad.",
+  },
+  {
+    title: "Step III : Create and Collaborate",
+    content:
+      "Once you have completed all the necessities and you're officially part of the FadFab Squad, it's time to get creative! Collaborate with us to create unique and engaging content that showcases your talent and helps us promote Fad.",
+  },
+  {
+    title: "Step IV : Perks and Benefits",
+    content:
+      "As a member of the FadFab Squad, you'll enjoy exclusive perks and benefits, including access to our network of fashion influencers, early access to Fad products, and more.",
+  },
+];
+
+function Page() {
   return (
-    <div ref={ref}>
-      <Container>
-        {letters.map((letter, index) => (
-          <motion.span
+    <TimelineContainer>
+      <Timeline>
+        {timelineItems.map((item, index) => (
+          <TimelineItem
             key={index}
-            initial={animationVariants.hidden}
-            animate={
-              inView ? animationVariants.visible : animationVariants.hidden
-            }
-            transition={{
-              ...transition,
-              delay: index * transition.delay,
-            }}
-            style={{
-              opacity: inView ? 1 : 0,
-              transform: inView ? "translateY(0)" : "translateY(20px)",
-            }}
+            isRight={index % 2 !== 0}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: index * 0.2 }}
           >
-            {letter === "\n" ? <br /> : letter}
-          </motion.span>
+            <Content>
+              <h2>{item.title}</h2>
+              <p>{item.content}</p>
+            </Content>
+          </TimelineItem>
         ))}
-      </Container>
-    </div>
+      </Timeline>
+    </TimelineContainer>
   );
-};
+}
 
-export default SplitReveal;
-
+export default Page;

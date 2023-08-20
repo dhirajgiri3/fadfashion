@@ -36,7 +36,10 @@ function Header() {
         <Link className={style.a} href="/about">
           what is FAD?
         </Link>
-        <Link className={style.a} href="#form">
+        <Link className={style.a} href="/fadfabsquad">
+          Fadfabsquad
+        </Link>
+        <Link className={style.widebutton} href="#form">
           <WideButton
             text="Join FAD"
             fontsize="1.5rem"

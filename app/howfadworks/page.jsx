@@ -1,12 +1,13 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import First from "@/Component/Works/First";
 import TierSystem from "@/Component/Works/TierSystem";
 import BattleWars from "@/Component/Works/Battlewars";
 import Footer from "@/Component/Common/Footer/Footer";
 import Influencer from "@/Component/Works/Influencer";
+import Loader1 from "@/Component/Common/Loaders/Loader1";
 
 const Container = styled.div`
   min-height: 100vh;
@@ -36,15 +37,29 @@ const Container = styled.div`
 `;
 
 function page() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+  }, [loading]);
+
   return (
     <div>
-      <Container>
-        <First />
-        <TierSystem />
-        <BattleWars />
-        <Influencer />
-        <Footer />
-      </Container>
+      {loading ? (
+        <Loader1 />
+      ) : (
+        <>
+          <Container>
+            <First />
+            <TierSystem />
+            <BattleWars />
+            <Influencer />
+            <Footer />
+          </Container>
+        </>
+      )}
     </div>
   );
 }

@@ -12,6 +12,9 @@
   left: 0;
   z-index: 998;
 
+  @media screen and (max-width: 1000px) {
+    height: 10vh;
+  }
   @media screen and (max-width: 768px) {
     justify-content: center;
     flex-direction: column;
@@ -64,12 +67,11 @@
       font-weight: 500;
 
       @media screen and (max-width: 768px) {
-        font-size: 1.7rem;
+        font-size: 1.5rem;
         margin: 0 0.5rem;
       }
     }
-
-    .subscribeButton {
+    .widebutton {
       color: #eee;
       text-decoration: none;
       font-size: 1.5rem;
@@ -78,18 +80,10 @@
       letter-spacing: 1px;
       font-family: "tenon";
       font-weight: 500;
-      padding: 1rem 3rem;
-      background: #ff005c;
-      border-radius: 100px;
-      -webkit-border-radius: 100px;
-      -moz-border-radius: 100px;
-      -ms-border-radius: 100px;
-      -o-border-radius: 100px;
-    }
 
-    .subscribeButton:hover {
-      background: #aaaaaa20;
-      color: #fff;
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
     }
 
     .a:hover {

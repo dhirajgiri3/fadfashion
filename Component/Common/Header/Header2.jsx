@@ -36,6 +36,9 @@ function Header2() {
         <Link className={style.a} href="/about">
           what is FAD?
         </Link>
+        <Link className={style.a} href="/fadfabsquad">
+          Fadfabsquad
+        </Link>
         <Link className={style.a} href="#form">
           <WideButton
             text="Join FAD"

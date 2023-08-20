@@ -45,8 +45,9 @@ const Firsts = styled.div`
     h1 {
       font-size: 13rem;
       font-family: "tenon-bold";
+
       background: -webkit-linear-gradient(#fff, #222);
-      background: -webkit-linear-gradient(#fff, #ffd3e0, #ff005c);
+      background: linear-gradient(to left, #fff, #ffd3e0, #ff005c);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
 
