@@ -40,6 +40,7 @@ const Cards = styled.div`
       font-weight: 700;
       padding: 1rem 2rem;
       background: #ff895e;
+      background: #f0005c;
       border-bottom-left-radius: 20px;
       font-size: 1rem;
       font-family: "tenon";
@@ -123,7 +124,7 @@ const Cards = styled.div`
         font-weight: 400;
         font-family: "tenon";
         text-align: center;
-        color: rgba(255, 255, 255, 0.7);
+        color: rgba(255, 255, 255, 0.9);
       }
     }
   }

@@ -14,15 +14,19 @@ const SecondSectionContainer = styled.div`
   flex-direction: column;
   margin: 5rem 0;
 
+  @media screen and (max-width: 768px) {
+    margin: 3rem 0;
+  }
+
   .top {
     h1 {
       font-size: 5rem;
       text-align: center;
+      font-weight: 100;
 
       @media screen and (max-width: 768px) {
         font-size: 3rem;
       }
-      
     }
   }
 
@@ -35,6 +39,10 @@ const SecondSectionContainer = styled.div`
     grid-template-rows: repeat(2, 1fr);
     place-items: center;
     margin: 5rem 0;
+
+    @media screen and (max-width: 768px) {
+      margin: 3rem 0;
+    }
 
     .first {
       grid-column: 1/2;

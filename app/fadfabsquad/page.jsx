@@ -7,6 +7,7 @@ import styled from "styled-components";
 import FirstSection from "@/Component/FadFabSquad/FirstSection";
 import SecondSection from "@/Component/FadFabSquad/SecondSection";
 import Footer from "@/Component/Common/Footer/Footer";
+import ThirdSection from "@/Component/FadFabSquad/ThirdSection";
 
 const TimelineContainer = styled.div`
   padding-top: 10rem;
@@ -28,6 +29,7 @@ function page() {
       <TimelineContainer>
         <FirstSection />
         <SecondSection />
+        <ThirdSection />
         <Timeline />
       </TimelineContainer>
       <Footer />
