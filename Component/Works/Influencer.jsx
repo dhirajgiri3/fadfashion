@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import React from "react";
 import styled from "styled-components";
-import { useAnimate, stagger } from "framer-motion";
 
 const InfluencerContainer = styled.div`
   min-height: 30vh;
@@ -31,7 +30,7 @@ const InfluencerContainer = styled.div`
 
     h1 {
       font-size: 5rem;
-      background: -webkit-linear-gradient(#fff, #222);
+      background: -webkit-linear-gradient(#ff005c, #ffd5d5);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
 
@@ -65,7 +64,7 @@ const InfluencerContainer = styled.div`
 
     h1 {
       font-size: 7rem;
-      background: -webkit-linear-gradient(#fff, #222);
+      background: -webkit-linear-gradient(#ff005c, #ffd5e5);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
 

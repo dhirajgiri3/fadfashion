@@ -8,6 +8,7 @@ import BattleWars from "@/Component/Works/Battlewars";
 import Footer from "@/Component/Common/Footer/Footer";
 import Influencer from "@/Component/Works/Influencer";
 import Loader1 from "@/Component/Common/Loaders/Loader1";
+import Header from "@/Component/Common/Header/Header";
 
 const Container = styled.div`
   min-height: 100vh;
@@ -15,7 +16,7 @@ const Container = styled.div`
   width: 100%;
   background: linear-gradient(#101010, #151515);
   padding: 0 10rem;
-  padding-top: 15vh;
+  padding-top: 10vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -31,7 +32,7 @@ const Container = styled.div`
 
   @media screen and (max-width: 768px) {
     padding: 0 1rem;
-    padding-top: 19vh;
+    padding-top: 17vh;
     text-align: center;
   }
 `;
@@ -52,6 +53,7 @@ function page() {
       ) : (
         <>
           <Container>
+            <Header />
             <First />
             <TierSystem />
             <BattleWars />

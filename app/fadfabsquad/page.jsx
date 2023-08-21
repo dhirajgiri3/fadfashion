@@ -27,7 +27,6 @@ function page() {
         <ThirdSection />
         <Timeline />
         <Form />
-        {/* <Form2 /> */}
       </TimelineContainer>
       <Footer />
     </div>

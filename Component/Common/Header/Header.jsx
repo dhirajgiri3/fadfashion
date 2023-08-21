@@ -39,23 +39,6 @@ function Header() {
         <Link className={style.a} href="/fadfabsquad">
           Fadfabsquad
         </Link>
-        <Link className={style.widebutton} href="#form">
-          <WideButton
-            text="Join FAD"
-            fontsize="1.5rem"
-            color="#fff"
-            hoverbg="#ffffff"
-            bg="#ff005c"
-            hovercolor="#111"
-            bordercolor="#ff005c"
-            mpaddingx="4rem"
-            mpaddingy="1.2rem"
-            mfontsize="1rem"
-            title="Join Fad"
-            height="4.5rem"
-            width="12rem"
-          />
-        </Link>
       </div>
     </motion.div>
   );

@@ -39,8 +39,9 @@ function Header2() {
         <Link className={style.a} href="/fadfabsquad">
           Fadfabsquad
         </Link>
-        <Link className={style.a} href="#form">
+        {/* <Link className={style.a} href="#form">
           <WideButton
+            className={style.WideButtons}
             text="Join FAD"
             fontsize="1.5rem"
             color="#fff"
@@ -55,7 +56,7 @@ function Header2() {
             height="4.5rem"
             width="12rem"
           />
-        </Link>
+        </Link> */}
       </div>
     </motion.div>
   );

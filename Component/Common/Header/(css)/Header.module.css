@@ -11,20 +11,12 @@
   top: 0;
   left: 0;
   z-index: 998;
+  background: transparent;
 
-  @media screen and (max-width: 1000px) {
-    height: 10vh;
-  }
   @media screen and (max-width: 768px) {
     justify-content: center;
     flex-direction: column;
-    height: 12vh;
-    gap: 1rem;
-  }
-  @media screen and (max-width: 376px) {
-    justify-content: center;
-    flex-direction: column;
-    height: 15vh;
+    height: 17vh;
     gap: 1rem;
   }
 
@@ -63,32 +55,18 @@
     align-items: center;
 
     .a {
-      color: #eee;
+      color: #fff;
       text-decoration: none;
       font-size: 1.5rem;
       cursor: pointer;
       transition: all 0.3s ease-in-out;
       letter-spacing: 1px;
-      font-family: "tenon";
+      font-family: "roboto";
       font-weight: 500;
 
       @media screen and (max-width: 768px) {
-        font-size: 1.5rem;
+        font-size: 1.7rem;
         margin: 0 0.5rem;
-      }
-    }
-    .widebutton {
-      color: #eee;
-      text-decoration: none;
-      font-size: 1.5rem;
-      cursor: pointer;
-      transition: all 0.3s ease-in-out;
-      letter-spacing: 1px;
-      font-family: "tenon";
-      font-weight: 500;
-
-      @media screen and (max-width: 768px) {
-        display: none;
       }
     }
 

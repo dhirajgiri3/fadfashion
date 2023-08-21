@@ -70,29 +70,6 @@
       }
     }
 
-    .subscribeButton {
-      color: #111;
-      text-decoration: none;
-      font-size: 1.5rem;
-      cursor: pointer;
-      transition: all 0.3s ease-in-out;
-      letter-spacing: 1px;
-      font-family: "tenon";
-      font-weight: 500;
-      padding: 1rem 3rem;
-      background: #ff005c;
-      border-radius: 100px;
-      -webkit-border-radius: 100px;
-      -moz-border-radius: 100px;
-      -ms-border-radius: 100px;
-      -o-border-radius: 100px;
-    }
-
-    .subscribeButton:hover {
-      background: #aaaaaa20;
-      color: #fff;
-    }
-
     .a:hover {
       color: #ff005c;
     }
