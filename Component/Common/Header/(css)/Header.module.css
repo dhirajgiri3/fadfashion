@@ -18,7 +18,13 @@
   @media screen and (max-width: 768px) {
     justify-content: center;
     flex-direction: column;
-    height: 17vh;
+    height: 12vh;
+    gap: 1rem;
+  }
+  @media screen and (max-width: 376px) {
+    justify-content: center;
+    flex-direction: column;
+    height: 15vh;
     gap: 1rem;
   }
 
@@ -82,7 +88,7 @@
       font-weight: 500;
 
       @media screen and (max-width: 768px) {
-       display: none;
+        display: none;
       }
     }
 

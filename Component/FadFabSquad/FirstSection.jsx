@@ -84,6 +84,7 @@ const FadfabsquadFirstContainer = styled.div`
       display: flex;
       justify-content: flex-start;
       align-items: flex-start;
+      padding-top: 15vh;
 
       @media screen and (max-width: 768px) {
         rotate: 90deg;
@@ -127,7 +128,7 @@ const FadfabsquadFirstContainer = styled.div`
         @media screen and (max-width: 768px) {
           rotate: -90deg;
           font-size: 1rem;
-          margin-left: 7rem;
+          padding-top: 23vh;
         }
       }
     }
@@ -181,7 +182,7 @@ const FadfabsquadFirstContainer = styled.div`
 
   .top {
     position: absolute;
-    top: 0;
+    top: 10vh;
     left: 0;
     z-index: 5;
     width: 100%;
@@ -193,16 +194,16 @@ const FadfabsquadFirstContainer = styled.div`
     padding: 0 10rem;
 
     @media screen and (max-width: 1000px) {
-      top: 10rem;
+      top: 13vh;
     }
 
     @media screen and (max-width: 768px) {
       padding: 0 1rem;
-      top: 3rem;
+      top: 14.5vh;
     }
     @media screen and (max-width: 376px) {
       padding: 0 1rem;
-      top: 0rem;
+      top: 16vh;
     }
 
     h1 {
@@ -212,6 +213,9 @@ const FadfabsquadFirstContainer = styled.div`
 
       @media screen and (max-width: 768px) {
         font-size: 4rem;
+      }
+      @media screen and (max-width: 376px) {
+        font-size: 3.5rem;
       }
     }
   }

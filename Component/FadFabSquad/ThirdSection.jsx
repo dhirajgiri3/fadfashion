@@ -68,6 +68,7 @@ const ThirdSectionContainer = styled.div`
     font-size: 5rem;
     font-weight: 100;
     color: #eee;
+    font-family: "roboto";
 
     @media screen and (max-width: 768px) {
       font-size: 3rem;
@@ -103,6 +104,7 @@ const ThirdSectionContainer = styled.div`
         justify-content: center;
         align-items: center;
         gap: 1rem;
+        font-family: "roboto" !important;
         span {
           font-size: 2rem;
           font-weight: 100;
@@ -122,7 +124,7 @@ const ThirdSectionContainer = styled.div`
         font-size: 1.5rem;
         line-height: 1.5;
         font-weight: 400;
-        font-family: "tenon";
+        font-family: "roboto";
         text-align: center;
         letter-spacing: 0.5px;
         color: rgba(255, 255, 255, 0.8);

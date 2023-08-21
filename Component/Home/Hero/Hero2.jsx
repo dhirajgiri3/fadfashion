@@ -164,12 +164,12 @@ const Hero2Container = styled.div`
           justify-content: flex-end;
           align-items: flex-end;
           p {
-            font-family: "tenon";
+            font-family: "roboto";
             line-height: 1.3;
             width: 40%;
             font-size: 1.3rem;
             color: #ffffff;
-            font-weight: 500;
+            font-weight: 300;
             display: flex;
             flex-direction: column;
             letter-spacing: 0.5px;

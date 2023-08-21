@@ -10,16 +10,16 @@ import Footer from "@/Component/Common/Footer/Footer";
 import ThirdSection from "@/Component/FadFabSquad/ThirdSection";
 
 const TimelineContainer = styled.div`
-  padding-top: 10rem;
+  /* padding-top: 10rem; */
   cursor: auto;
   background: #101010;
 
-  @media screen and (max-width: 1000px) {
+  /* @media screen and (max-width: 1000px) {
     padding-top: 13rem;
   }
   @media screen and (max-width: 768px) {
     padding-top: 15rem;
-  }
+  } */
 `;
 
 function page() {

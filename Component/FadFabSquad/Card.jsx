@@ -43,7 +43,7 @@ const Cards = styled.div`
       background: #f0005c;
       border-bottom-left-radius: 20px;
       font-size: 1rem;
-      font-family: "tenon";
+      font-family: "roboto";
       font-weight: 300;
       letter-spacing: 0.5px;
     }
@@ -122,7 +122,7 @@ const Cards = styled.div`
         font-size: 1.5rem;
         line-height: 1.5;
         font-weight: 400;
-        font-family: "tenon";
+        font-family: "roboto";
         text-align: center;
         color: rgba(255, 255, 255, 0.9);
       }

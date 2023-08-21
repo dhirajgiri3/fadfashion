@@ -19,7 +19,7 @@ const AboutConatiner = styled.div`
   width: 100%;
   height: 100%;
   padding: 0 10rem;
-  padding-top: 20vh;
+  padding-top: 5vh;
 
   @media screen and (max-width: 1000px) {
     padding: 0 5rem;
