@@ -21,6 +21,8 @@ const TimelineContainer = styled.div`
     text-align: center;
     width: 100%;
     color: rgba(255, 255, 255, 0.9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 
     @media screen and (max-width: 768px) {
       font-size: 3rem;
@@ -58,7 +60,7 @@ const TimelineItem = styled(motion.div)`
     width: 27px;
     height: 27px;
     right: -19px;
-    background-color: #8f0034;
+    background-color: #ff895e;
     border: 2px solid #fff;
     top: 15px;
     border-radius: 50%;
@@ -78,8 +80,10 @@ const TimelineItem = styled(motion.div)`
       z-index: 1;
       left: 30px;
       border: medium solid #8f0034;
+      border: medium solid rgb(255, 219, 206);
       border-width: 10px 10px 10px 0;
       border-color: transparent #8f0034 transparent transparent;
+      border-color: transparent rgb(255, 219, 206) transparent transparent;
     }
     &::after {
       right: auto;
@@ -96,8 +100,10 @@ const TimelineItem = styled(motion.div)`
       z-index: 1;
       right: 30px;
       border: medium solid #8f0034;
+      border: medium solid rgb(255, 219, 206);
       border-width: 10px 0 10px 10px;
       border-color: transparent transparent transparent #8f0034;
+      border-color: transparent transparent transparent rgb(255, 219, 206);
     }
     &::after {
       left: auto;
@@ -113,9 +119,16 @@ const TimelineItem = styled(motion.div)`
 const Content = styled.div`
   padding: 20px;
   background-color: #8f0034;
+  background: linear-gradient(
+    120deg,
+    bisque 20%,
+    rgb(255, 219, 206) 88%,
+    rgb(251, 159, 126) 40%,
+    rgb(255, 142, 101, 0.8) 78%
+  );
   position: relative;
   border-radius: 20px;
-  color: #eee;
+  color: #111;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -126,16 +139,15 @@ const Content = styled.div`
   h2 {
     font-size: 2.5rem;
     font-weight: 600;
-    font-family: "tenon";
+    font-family: "roboto";
   }
 
   p {
     font-size: 1.3rem;
     font-weight: 400;
-    font-family: "tenon";
-    letter-spacing: 0.5px;
+    font-family: "roboto";
     line-height: 1.3;
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(1, 1, 1, 0.7);
   }
 
   @media screen and (max-width: 768px) {

@@ -67,7 +67,7 @@ function Page() {
     if (videoSectionInView) {
       // The slider section is in view, change the background color of the container smoothly
       gsap.to(pageContainers.current, {
-        backgroundColor: "#8E05C2",
+        backgroundColor: "#393646",
         duration: 0.3,
         ease: "power2.inOut",
       });

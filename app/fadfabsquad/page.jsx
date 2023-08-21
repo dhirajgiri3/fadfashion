@@ -8,18 +8,13 @@ import FirstSection from "@/Component/FadFabSquad/FirstSection";
 import SecondSection from "@/Component/FadFabSquad/SecondSection";
 import Footer from "@/Component/Common/Footer/Footer";
 import ThirdSection from "@/Component/FadFabSquad/ThirdSection";
+import Form from "@/Component/FadFabSquad/Form/Form";
+import Response from "@/Component/FadFabSquad/Form/Response";
+import Form2 from "@/Component/FadFabSquad/Form/Form2";
 
 const TimelineContainer = styled.div`
-  /* padding-top: 10rem; */
   cursor: auto;
   background: #101010;
-
-  /* @media screen and (max-width: 1000px) {
-    padding-top: 13rem;
-  }
-  @media screen and (max-width: 768px) {
-    padding-top: 15rem;
-  } */
 `;
 
 function page() {
@@ -31,6 +26,8 @@ function page() {
         <SecondSection />
         <ThirdSection />
         <Timeline />
+        <Form />
+        {/* <Form2 /> */}
       </TimelineContainer>
       <Footer />
     </div>

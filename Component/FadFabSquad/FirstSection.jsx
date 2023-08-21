@@ -209,7 +209,9 @@ const FadfabsquadFirstContainer = styled.div`
     h1 {
       font-size: 10rem;
       font-weight: 100;
-      color: #eee;
+      background: -webkit-linear-gradient(#ffffff,#c7bbff , #241952);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
 
       @media screen and (max-width: 768px) {
         font-size: 4rem;
