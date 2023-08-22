@@ -202,7 +202,7 @@ const FadfabsquadFirstContainer = styled.div`
 
     @media screen and (max-width: 768px) {
       padding: 0 1rem;
-      top: 14.5vh;
+      top: 16vh;
     }
     @media screen and (max-width: 376px) {
       padding: 0 1rem;
