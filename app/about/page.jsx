@@ -86,7 +86,7 @@ function Page() {
         <Loader1 />
       ) : (
         <>
-          <Header2 />
+          {/* <Header2 /> */}
           <AboutConatiner className="about">
             <div className="first-section">
               <First />
