@@ -68,7 +68,7 @@ const ThirdSectionContainer = styled.div`
     font-size: 5rem;
     font-weight: 100;
     color: #eee;
-    font-family: "roboto";
+    font-family: 'kurdasan';
 
     @media screen and (max-width: 768px) {
       font-size: 3rem;

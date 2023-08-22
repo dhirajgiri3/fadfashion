@@ -30,7 +30,7 @@ const VidParaContainer = styled.div`
   }
 
   h1 {
-    font-family: "tenon";
+    font-family: "kurdasan";
     font-size: 5rem;
     text-align: left;
     font-weight: 700;
@@ -48,12 +48,12 @@ const VidParaContainer = styled.div`
   }
 
   h3 {
-    font-family: "kurdasan";
-    font-size: 3rem;
+    font-family: "roboto";
+    font-size: 2.5rem;
     color: #fff;
     text-align: left;
-    font-weight: 300;
-    letter-spacing: 1px;
+    font-weight: 100;
+    letter-spacing: .5px;
     line-height: 2.5;
 
     @media screen and (max-width: 768px) {

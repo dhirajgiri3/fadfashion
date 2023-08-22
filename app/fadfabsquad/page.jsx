@@ -18,14 +18,13 @@ const TimelineContainer = styled.div`
 `;
 
 function page() {
-
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
     }, 2000);
-  }, []); 
+  }, []);
 
   return (
     <div>
@@ -39,7 +38,9 @@ function page() {
             <SecondSection />
             <ThirdSection />
             <Timeline />
-            <Form />
+            <div id="form">
+              <Form />
+            </div>
           </TimelineContainer>
           <Footer />
         </>

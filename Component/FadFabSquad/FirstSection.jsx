@@ -166,6 +166,7 @@ const FadfabsquadFirstContainer = styled.div`
         font-size: 5rem;
         font-weight: 100;
         color: #eee;
+        font-family: 'kurdasan';
 
         @media screen and (max-width: 768px) {
           rotate: -90deg;
@@ -194,6 +195,7 @@ const FadfabsquadFirstContainer = styled.div`
     align-items: flex-start;
     padding: 0 10rem;
 
+
     @media screen and (max-width: 1000px) {
       top: 13vh;
     }
@@ -209,10 +211,11 @@ const FadfabsquadFirstContainer = styled.div`
 
     h1 {
       font-size: 10rem;
-      font-weight: 100;
+      font-weight: 500;
       background: -webkit-linear-gradient(#ffffff,#c7bbff , #241952);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+      font-family: 'kurdasan';
 
       @media screen and (max-width: 768px) {
         font-size: 4rem;

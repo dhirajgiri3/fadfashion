@@ -27,9 +27,9 @@ const FormContainer = styled(motion.form)`
 
   h1 {
     font-size: 6rem;
-    font-weight: 300;
+    font-weight: 700;
     color: #111;
-    font-family: "roboto";
+    font-family: 'kurdasan';
     margin: 3rem auto;
     text-align: center;
 
@@ -293,6 +293,7 @@ const FormContainer = styled(motion.form)`
 
   .fifth {
     flex: 1;
+    margin-bottom: 3rem;
 
     .button {
       display: flex;

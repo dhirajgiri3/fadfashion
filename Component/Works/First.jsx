@@ -44,7 +44,7 @@ const Firsts = styled.div`
 
     h1 {
       font-size: 13rem;
-      font-family: "roboto-bold";
+      font-family: 'kurdasan';
 
       background: -webkit-linear-gradient(#fff, #222);
       background: linear-gradient(to left, #fff, #ffd3e0, #ff005c);

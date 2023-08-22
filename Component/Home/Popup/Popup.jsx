@@ -31,23 +31,25 @@ const PopupContainer = styled(motion.div)`
 
     @media screen and (max-width: 1000px) {
       width: 80%;
-      height: 60vh;
+      height: 70vh;
     }
 
     @media screen and (max-width: 768px) {
       width: 90%;
       height: 80vh;
     }
+    @media screen and (max-width: 376px) {
+      width: 90%;
+      height: 95vh;
+    }
 
     .cls {
       width: 100%;
-      font-family: "roboto";
       height: 100%;
-      font-size: 1.5rem;
+      font-size: 3rem;
       display: flex;
       justify-content: flex-end;
-      align-items: center;
-      font-weight: 500;
+      align-items: right;
       cursor: pointer;
       color: #ff005c;
       transition: all 0.3s ease-in-out;
@@ -59,6 +61,12 @@ const PopupContainer = styled(motion.div)`
       @media screen and (max-width: 1000px) {
         height: 10vh;
         margin-right: 5rem;
+        font-size: 4rem;
+      }
+      @media screen and (max-width: 768px) {
+        height: 10vh;
+        margin-right: 5rem;
+        font-size: 2rem;
       }
     }
 
@@ -180,7 +188,7 @@ const NewsletterPopup = () => {
   const [showPopup, setShowPopup] = useState(false); // State to control the visibility of the popup
 
   const handleClose = () => {
-    setShowPopup(false); // Set the state to false to hide the popup
+    setShowPopup(false);
   };
 
   useEffect(() => {
@@ -192,7 +200,7 @@ const NewsletterPopup = () => {
   useEffect(() => {
     if (state.succeeded) {
       alert("Thanks for subscribing us");
-      handleClose(); // Close the popup when the form is successfully submitted
+      handleClose();
     }
   }, [state.succeeded]);
 
@@ -213,18 +221,16 @@ const NewsletterPopup = () => {
             beforeEnter: (el) => {
               el.style.opacity = 0;
               el.style.transform = "scale(0)";
-              console.log("before enter");
             },
             afterEnter: (el) => {
               el.style.opacity = 1;
               el.style.transform = "scale(1)";
-              console.log("after enter");
             },
           }}
         >
           <div className="left">
             <div className="cls" onClick={handleClose}>
-              Close
+              &#x2715;
             </div>
             <div className="heading">
               <h1>Get In Touch</h1>

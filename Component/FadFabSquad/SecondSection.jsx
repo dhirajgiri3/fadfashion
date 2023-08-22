@@ -23,6 +23,7 @@ const SecondSectionContainer = styled.div`
       font-size: 5rem;
       text-align: center;
       font-weight: 100;
+      font-family: 'kurdasan';
 
       @media screen and (max-width: 768px) {
         font-size: 3rem;

@@ -10,7 +10,6 @@ import VidPara from "@/Component/Home/VideoParagraph/VidPara";
 import Footer from "@/Component/Common/Footer/Footer";
 import Form from "@/Component/Home/Form/Form";
 import { gsap } from "gsap";
-
 import { useInView } from "react-intersection-observer";
 import Popup from "@/Component/Home/Popup/Popup";
 import Header from "@/Component/Common/Header/Header";
