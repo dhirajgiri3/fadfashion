@@ -23,11 +23,11 @@ const AboutConatiner = styled.div`
 
   @media screen and (max-width: 1000px) {
     padding: 0 5rem;
-    padding-top: 15vh;
+    padding-top: 5vh;
   }
   @media screen and (max-width: 768px) {
     padding: 0 1rem;
-    padding-top: 20vh;
+    padding-top: 10vh;
   }
 
   .first-section {
@@ -86,7 +86,7 @@ function Page() {
         <Loader1 />
       ) : (
         <>
-          {/* <Header2 /> */}
+          <Header2 />
           <AboutConatiner className="about">
             <div className="first-section">
               <First />

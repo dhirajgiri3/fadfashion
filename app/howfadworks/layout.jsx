@@ -1,5 +1,6 @@
 import React from "react";
 import "./../globals.css";
+import Header from "@/Component/Common/Header/Header";
 
 export const metadata = {
   title: "How Fad Works",
@@ -18,7 +19,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        {" "}
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }

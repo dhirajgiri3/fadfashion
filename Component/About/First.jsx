@@ -53,11 +53,12 @@ function First() {
           @media screen and (max-width: 1000px) {
             width: 70%;
             text-align: center;
-            font-size: 2rem;
+            font-size: 2.5rem;
           }
           @media screen and (max-width: 768px) {
             width: 70%;
             text-align: center;
+            font-size: 1.5rem;
           }
 
           @media screen and (max-width: 376px) {
@@ -113,7 +114,7 @@ function First() {
         }
 
         p {
-          font-size: 1.4rem;
+          font-size: 1.5rem;
           font-weight: 100;
           line-height: 1.5;
           font-family: "roboto";
@@ -126,13 +127,13 @@ function First() {
           @media screen and (max-width: 1000px) {
             width: 70%;
             text-align: center;
-            font-size: 2rem;
+            font-size: 2.5rem;
             color: #fff;
           }
           @media screen and (max-width: 768px) {
             width: 70%;
             text-align: center;
-            font-size: 1.4rem;
+            font-size: 1.5rem;
           }
         }
       }

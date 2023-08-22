@@ -53,7 +53,7 @@ function page() {
       ) : (
         <>
           <Container>
-            <Header />
+            {/* <Header /> */}
             <First />
             <TierSystem />
             <BattleWars />

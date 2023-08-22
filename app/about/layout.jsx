@@ -1,6 +1,4 @@
-
 import "./../globals.css";
-import Header2 from "@/Component/Common/Header/Header2";
 
 export const metadata = {
   title: "About | FAD",
@@ -19,10 +17,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>
-        <Header2/>
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   );
 }

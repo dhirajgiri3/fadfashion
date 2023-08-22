@@ -68,7 +68,7 @@ const Firsts = styled.div`
       width: 70%;
 
       @media screen and (max-width: 1000px) {
-        font-size: 1.5rem;
+        font-size: 2rem;
         width: 100%;
       }
 
