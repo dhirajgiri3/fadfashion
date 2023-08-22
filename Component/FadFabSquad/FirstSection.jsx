@@ -202,11 +202,11 @@ const FadfabsquadFirstContainer = styled.div`
 
     @media screen and (max-width: 768px) {
       padding: 0 1rem;
-      top: 16vh;
+      top: 18vh;
     }
     @media screen and (max-width: 376px) {
       padding: 0 1rem;
-      top: 16vh;
+      top: 17vh;
     }
 
     h1 {
@@ -218,7 +218,7 @@ const FadfabsquadFirstContainer = styled.div`
       font-family: 'kurdasan';
 
       @media screen and (max-width: 768px) {
-        font-size: 4rem;
+        font-size: 3.8rem;
       }
       @media screen and (max-width: 376px) {
         font-size: 3.5rem;
