@@ -12,10 +12,12 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 const FooterContainer = styled.div`
   position: relative;
   width: calc(100% - 10rem);
-  height: 85vh;
+  min-height: 85vh;
+  height: 100%;
   z-index: 0;
   margin: 0 auto;
   margin-top: 5rem;
+  padding: 3rem 0;
 
   @media screen and (max-width: 1000px) {
     min-height: 50vh;
@@ -24,14 +26,14 @@ const FooterContainer = styled.div`
     margin-top: 0;
   }
   @media screen and (max-width: 768px) {
-    min-height: 80vh;
+    min-height: 90vh;
     height: 100%;
     width: 100%;
     margin-top: 0;
   }
 
-  @media screen and (max-width: 400px) {
-    min-height: 95vh;
+  @media screen and (max-width: 376px) {
+    min-height: 100vh;
     height: 100%;
     width: 100%;
     margin: 0;
@@ -61,7 +63,7 @@ const FooterContainer = styled.div`
     left: 0;
     height: 100%;
     width: 100%;
-    background: #00000099;
+    background: rgba(0, 0, 0, 0.7);
     z-index: 2;
     border-top-right-radius: 100px;
     border-top-left-radius: 100px;
@@ -125,7 +127,7 @@ const FooterContainer = styled.div`
           transition: all 0.3s ease-in-out;
 
           &:hover {
-            color: #ff050c;
+            color: #ff005c;
           }
         }
       }
@@ -192,7 +194,7 @@ const FooterContainer = styled.div`
           justify-content: flex-start;
           align-items: flex-start;
           flex-direction: column;
-          gap: 1rem;
+          gap: 2rem;
 
           a {
             text-decoration: none;
@@ -219,7 +221,7 @@ const FooterContainer = styled.div`
             transition: all 0.5s ease-in-out;
 
             &:hover {
-              color: #ff050c;
+              color: #ff005c;
             }
           }
         }
@@ -228,6 +230,18 @@ const FooterContainer = styled.div`
           white-space: nowrap;
           color: #fff;
           font-size: 1.2rem;
+
+          a {
+            text-decoration: none;
+
+            span {
+              font-family: "roboto";
+              font-weight: 700;
+              color: #ff005c;
+              font-size: 2rem;
+              margin: 0 0.5rem;
+            }
+          }
         }
       }
     }
@@ -249,7 +263,8 @@ function Footer() {
         loop
         muted
         playsInline
-        src="https://res.cloudinary.com/divbobkmd/video/upload/v1690836829/trial004_crtrci.mp4"
+        // src="https://res.cloudinary.com/divbobkmd/video/upload/v1690836829/trial004_crtrci.mp4"
+        src="https://res.cloudinary.com/divbobkmd/video/upload/v1692699848/fad-exm1_qdqp2e.mp4"
         className="bgvideo"
       />
       <div className="overlay" />
@@ -263,7 +278,7 @@ function Footer() {
           <div onClick={scrollToTop} className="right">
             <KeyboardDoubleArrowUpIcon
               style={{
-                color: "#ff050c",
+                color: "#ff005c",
                 fontSize: "3rem",
               }}
             />
@@ -326,6 +341,15 @@ function Footer() {
               </Link>
             </div>
             <p>© 2021 FAD. All rights reserved.</p>
+            <p>
+              Created by{" "}
+              <a
+                href="https://www.linkedin.com/company/cyper-studio/?viewAsMember=true"
+                target="_blank"
+              >
+                <span>Cyper Studio</span>
+              </a>
+            </p>
           </div>
         </div>
       </div>

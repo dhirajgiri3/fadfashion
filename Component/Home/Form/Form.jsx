@@ -229,7 +229,7 @@ const FormContainer = styled.div`
       }
 
       h1 {
-        font-family: "roboto-bold";
+        font-family: "roboto";
         font-size: 10rem;
         font-weight: 100;
         background-image: linear-gradient(90deg, #ffffff, #ff80ae, #ff005c);
