@@ -48,7 +48,7 @@ function First() {
           font-size: 1.4rem;
           font-weight: 100;
           line-height: 1.5;
-          font-family: "tenon";
+          font-family: "roboto";
 
           @media screen and (max-width: 1000px) {
             width: 70%;
@@ -76,7 +76,7 @@ function First() {
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        font-family: "tenon";
+        font-family: "roboto";
         line-height: 0.9;
         mix-blend-mode: difference;
 
@@ -116,7 +116,7 @@ function First() {
           font-size: 1.4rem;
           font-weight: 100;
           line-height: 1.5;
-          font-family: "tenon";
+          font-family: "roboto";
           width: 60%;
           display: flex;
           flex-direction: column;

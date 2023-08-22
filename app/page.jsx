@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Hero2 from "@/Component/Home/Hero/Hero2";
 import ImageGrid from "@/Component/Home/ImageGrid/imageGrid";
 import styled from "styled-components";
@@ -11,16 +11,16 @@ import Footer from "@/Component/Common/Footer/Footer";
 import Form from "@/Component/Home/Form/Form";
 import { gsap } from "gsap";
 
-// Import necessary Intersection Observer libraries
 import { useInView } from "react-intersection-observer";
 import Popup from "@/Component/Home/Popup/Popup";
 import Header from "@/Component/Common/Header/Header";
+import Loader1 from "@/Component/Common/Loaders/Loader1";
 
 const PageContainer = styled.div`
   cursor: auto;
   overflow-x: hidden;
   background: #101010;
-  transition: background-color 0.5s ease; /* Add smooth transition effect */
+  transition: background-color 0.5s ease;
 `;
 
 function Page() {
@@ -28,6 +28,13 @@ function Page() {
   const [sliderSectionRef, sliderSectionInView] = useInView({ threshold: 0.4 });
   const [formSectionRef, formSectionInView] = useInView({ threshold: 0.4 });
   const [videoSectionRef, videoSectionInView] = useInView({ threshold: 0.4 });
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+  }, []);
 
   useEffect(() => {
     if (sliderSectionInView) {
@@ -65,14 +72,12 @@ function Page() {
 
   useEffect(() => {
     if (videoSectionInView) {
-      // The slider section is in view, change the background color of the container smoothly
       gsap.to(pageContainers.current, {
         backgroundColor: "#393646",
         duration: 0.3,
         ease: "power2.inOut",
       });
     } else {
-      // The slider section is not in view, reset the background color smoothly
       gsap.to(pageContainers.current, {
         backgroundColor: "#101010",
         duration: 0.3,
@@ -83,32 +88,38 @@ function Page() {
 
   return (
     <>
-      <Header />
-      <PageContainer ref={pageContainers}>
-        <div className="section hero">
-          <Hero2 />
-        </div>
-        <div className="section vidparagraph" ref={sliderSectionRef}>
-          <VidPara />
-        </div>
-        <div className="section slider" id="slider">
-          <Slider />
-        </div>
-        <div className="section video1" ref={videoSectionRef}>
-          <Video1 />
-        </div>
-        <div className="section imageGrid" id="imagegrid">
-          <ImageGrid />
-        </div>
+      {loading ? (
+        <Loader1 />
+      ) : (
+        <>
+          <Header />
+          <PageContainer ref={pageContainers}>
+            <div className="section hero">
+              <Hero2 />
+            </div>
+            <div className="section vidparagraph" ref={sliderSectionRef}>
+              <VidPara />
+            </div>
+            <div className="section slider" id="slider">
+              <Slider />
+            </div>
+            <div className="section video1" ref={videoSectionRef}>
+              <Video1 />
+            </div>
+            <div className="section imageGrid" id="imagegrid">
+              <ImageGrid />
+            </div>
 
-        <div className="section form" id="form" ref={formSectionRef}>
-          <Form />
-        </div>
-        <div className="section footer" id="footer">
-          <Footer />
-        </div>
-        <Popup />
-      </PageContainer>
+            <div className="section form" id="form" ref={formSectionRef}>
+              <Form />
+            </div>
+            <div className="section footer" id="footer">
+              <Footer />
+            </div>
+            <Popup />
+          </PageContainer>
+        </>
+      )}
     </>
   );
 }

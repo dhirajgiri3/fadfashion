@@ -98,7 +98,7 @@ function Second() {
             p {
               font-size: 1.1rem;
               font-weight: 300;
-              font-family: "tenon";
+              font-family: "roboto";
             }
 
             @media screen and (max-width: 768px) {
@@ -131,7 +131,7 @@ function Second() {
             p {
               font-size: 1.1rem;
               font-weight: 300;
-              font-family: "tenon";
+              font-family: "roboto";
 
               @media screen and (max-width: 768px) {
                 font-size: 1.3rem;
@@ -187,7 +187,7 @@ function Second() {
             p {
               font-size: 1.1rem;
               font-weight: 300;
-              font-family: "tenon";
+              font-family: "roboto";
 
               @media screen and (max-width: 768px) {
                 font-size: 1.3rem;

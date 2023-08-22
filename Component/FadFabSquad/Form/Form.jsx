@@ -21,7 +21,7 @@ const FormContainer = styled(motion.form)`
     padding: 5rem;
   }
   @media screen and (max-width: 768px) {
-    padding: 0 3rem;
+    padding: 5rem 3rem;
     gap: 3rem;
   }
 
@@ -310,7 +310,7 @@ const FormContainer = styled(motion.form)`
       cursor: pointer;
       transition: all 0.3s ease-in-out;
       font-weight: 100;
-      font-family: "tenon";
+      font-family: "roboto";
       gap: 0.5rem;
       position: relative;
       z-index: 0;
@@ -406,7 +406,7 @@ function Form() {
           <textarea
             id="message"
             name="message"
-            placeholder="Any Message For Us? (Optional)"
+            placeholder=" Tell Me Why We Should Include You In FadFabSquad?"
           />
           <ValidationError
             prefix="Message"
@@ -417,7 +417,7 @@ function Form() {
       </div>
       <div className="fifth">
         <button className="button" type="submit" disabled={state.submitting}>
-          Submit
+         Submit
         </button>
       </div>
     </FormContainer>

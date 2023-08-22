@@ -61,7 +61,7 @@
       cursor: pointer;
       transition: all 0.3s ease-in-out;
       letter-spacing: 1px;
-      font-family: "tenon";
+      font-family: "roboto";
       font-weight: 500;
 
       @media screen and (max-width: 768px) {

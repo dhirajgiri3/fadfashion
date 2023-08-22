@@ -29,8 +29,6 @@ const PopupContainer = styled(motion.div)`
     justify-content: center;
     align-items: center;
 
-
-
     @media screen and (max-width: 1000px) {
       width: 80%;
       height: 60vh;
@@ -43,7 +41,7 @@ const PopupContainer = styled(motion.div)`
 
     .cls {
       width: 100%;
-      font-family: "tenon";
+      font-family: "roboto";
       height: 100%;
       font-size: 1.5rem;
       display: flex;
@@ -71,7 +69,7 @@ const PopupContainer = styled(motion.div)`
         font-weight: 700;
         color: #111;
         margin-bottom: 3rem;
-        font-family: "tenon";
+        font-family: "roboto";
         margin: 0 auto;
 
         @media screen and (max-width: 768px) {
@@ -95,7 +93,7 @@ const PopupContainer = styled(motion.div)`
 
       label {
         color: #111;
-        font-family: "tenon";
+        font-family: "roboto";
         font-weight: 700;
         font-size: 1.5rem;
         margin: 1.5rem 0;
@@ -131,7 +129,7 @@ const PopupContainer = styled(motion.div)`
         margin-bottom: 4rem;
         margin-top: 1rem;
         resize: none;
-        font-family: "tenon";
+        font-family: "roboto";
         display: none;
 
         &::placeholder {
@@ -157,7 +155,7 @@ const PopupContainer = styled(motion.div)`
         outline: none;
         cursor: pointer;
         color: #eee;
-        font-family: "tenon";
+        font-family: "roboto";
         font-size: 1.5rem;
         display: flex;
         justify-content: center;

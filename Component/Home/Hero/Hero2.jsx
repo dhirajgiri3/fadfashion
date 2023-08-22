@@ -84,7 +84,7 @@ const Hero2Container = styled.div`
 
       .top {
         h1 {
-          font-family: "tenon";
+          font-family: "roboto";
           font-size: 10rem;
           font-weight: 700;
           width: 80%;
@@ -130,7 +130,7 @@ const Hero2Container = styled.div`
               cursor: pointer;
               transition: all 0.3s ease-in-out;
               font-weight: 100;
-              font-family: "tenon";
+              font-family: "roboto";
               gap: 0.5rem;
               position: relative;
               z-index: 0;

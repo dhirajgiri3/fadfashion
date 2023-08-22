@@ -172,7 +172,7 @@ const Heading = styled.h1`
 const Para = styled.p`
   font-size: 1.5rem;
   flex: 1;
-  font-family: "tenon";
+  font-family: "roboto";
   color: #eeeeee99;
   line-height: 1.5;
   letter-spacing: 1px;

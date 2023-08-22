@@ -93,7 +93,7 @@ const Container = styled.div`
 
         .top {
           h1 {
-            font-family: "tenon";
+            font-family: "roboto";
             font-size: 10rem;
             font-weight: 700;
             width: 80%;
@@ -116,7 +116,7 @@ const Container = styled.div`
           }
 
           p {
-            font-family: "tenon";
+            font-family: "roboto";
             line-height: 1.3;
             width: 50%;
             font-size: 1.3rem;

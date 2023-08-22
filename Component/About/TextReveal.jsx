@@ -22,7 +22,7 @@ const TextReveal = ({ para }) => {
       line-height: 1.5;
       letter-spacing: 0.5px;
       font-weight: 300;
-      font-family: "tenon";
+      font-family: "roboto";
     }
 
     @media screen and (max-width: 1000px) {

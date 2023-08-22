@@ -13,7 +13,7 @@ const ResponseContainer = styled.div`
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 10000;
+  z-index: 1000;
   transition: all 1s ease-in-out;
   background: #c5c5fe;
   overflow: hidden;
@@ -83,6 +83,7 @@ const ResponseContainer = styled.div`
       position: fixed;
       top: 5rem;
       right: 10rem;
+      z-index: 1001;
 
       button {
         font-size: 5rem;
@@ -126,7 +127,6 @@ function Response() {
           now.
         </p>
         <div className="close">
-          {" "}
           <button onClick={responseClose}> &#x2715;</button>
         </div>
       </div>

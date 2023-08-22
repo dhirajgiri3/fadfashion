@@ -15,7 +15,8 @@ const FadfabsquadFirstContainer = styled.div`
     top: 0;
     left: 0;
     z-index: 1;
-    background-image: url("https://res.cloudinary.com/divbobkmd/image/upload/v1692517201/fadsquad-1_h0kyi9.png");
+    /* background-image: url("https://res.cloudinary.com/divbobkmd/image/upload/v1692517201/fadsquad-1_h0kyi9.png"); */
+    background-image: url("https://res.cloudinary.com/divbobkmd/image/upload/v1692694205/fadsquad-1-compress_bvrn5h.jpg");
     background-size: cover;
     background-position: 50% 10%;
     background-repeat: no-repeat;

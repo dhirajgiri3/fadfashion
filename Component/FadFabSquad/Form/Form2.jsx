@@ -320,7 +320,7 @@ const FormContainer = styled(motion.form)`
       cursor: pointer;
       transition: all 0.3s ease-in-out;
       font-weight: 100;
-      font-family: "tenon";
+      font-family: "roboto";
       gap: 0.5rem;
       position: relative;
       z-index: 0;

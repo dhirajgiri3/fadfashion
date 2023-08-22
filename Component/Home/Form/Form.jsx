@@ -14,7 +14,7 @@ const FormContainer = styled.div`
   align-items: center;
   gap: 3rem;
   overflow: hidden;
-  font-family: "tenon";
+  font-family: "roboto";
   letter-spacing: 1px;
 
   @media screen and (max-width: 1000px) {
@@ -55,7 +55,7 @@ const FormContainer = styled.div`
         font-weight: 700;
         color: #222;
         margin-bottom: 3rem;
-        font-family: "tenon";
+        font-family: "roboto";
         margin: 0 auto;
       }
     }
@@ -74,7 +74,7 @@ const FormContainer = styled.div`
 
       label {
         color: #222;
-        font-family: "tenon";
+        font-family: "roboto";
         font-weight: 700;
         font-size: 1.5rem;
         margin: 1.5rem 0;
@@ -110,7 +110,7 @@ const FormContainer = styled.div`
         margin-bottom: 4rem;
         margin-top: 1rem;
         resize: none;
-        font-family: "tenon";
+        font-family: "roboto";
         display: none;
 
         &::placeholder {
@@ -136,7 +136,7 @@ const FormContainer = styled.div`
         outline: none;
         cursor: pointer;
         color: #eee;
-        font-family: "tenon";
+        font-family: "roboto";
         font-size: 1.5rem;
         display: flex;
         justify-content: center;
@@ -229,7 +229,7 @@ const FormContainer = styled.div`
       }
 
       h1 {
-        font-family: "tenon-bold";
+        font-family: "roboto-bold";
         font-size: 10rem;
         font-weight: 100;
         background-image: linear-gradient(90deg, #ffffff, #ff80ae, #ff005c);
@@ -246,7 +246,7 @@ const FormContainer = styled.div`
       }
 
       p {
-        font-family: "tenon";
+        font-family: "roboto";
         font-size: 1.5rem;
         font-weight: 500;
         letter-spacing: 1px;

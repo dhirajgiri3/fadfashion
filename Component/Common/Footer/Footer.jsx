@@ -256,9 +256,9 @@ function Footer() {
       <div className="content">
         <div className="top">
           <div className="left">
-            <Link href="/">Join the waitlist</Link>
-            <Link href="/">About Us</Link>
-            <Link href="/">Contact Us</Link>
+            <Link href="/fadfabsquad">FadFabSquad</Link>
+            <Link href="/about">About Us</Link>
+            <Link href="/howfadworks">How Fad Works?</Link>
           </div>
           <div onClick={scrollToTop} className="right">
             <KeyboardDoubleArrowUpIcon

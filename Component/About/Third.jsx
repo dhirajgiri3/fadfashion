@@ -45,7 +45,7 @@ const ThirdContainer = styled.div`
           font-size: 7rem;
           font-weight: 700;
           line-height: 1.2;
-          font-family: "tenon";
+          font-family: "roboto";
 
           span {
             font-family: "kurdasan";
@@ -66,7 +66,7 @@ const ThirdContainer = styled.div`
           font-size: 1.5rem;
           font-weight: 400;
           line-height: 1.5;
-          font-family: "tenon";
+          font-family: "roboto";
           letter-spacing: 0.5px;
 
           @media screen and (max-width: 1000px) {
@@ -99,6 +99,7 @@ const ThirdContainer = styled.div`
         padding-top: 2rem;
         padding-bottom: 0;
         overflow-y: hidden;
+        gap: 0;
       }
 
       .left {
