@@ -23,7 +23,7 @@ const ResponseContainer = styled.div`
     gap: 0;
   }
 
-  .left {
+  .responseleft {
     flex: 1;
     width: 100%;
     height: 100%;
@@ -41,7 +41,7 @@ const ResponseContainer = styled.div`
     }
   }
 
-  .right {
+  .responseright {
     flex: 1;
     width: 100%;
     min-height: 100vh;
@@ -65,7 +65,7 @@ const ResponseContainer = styled.div`
     h1 {
       font-size: 5rem;
       font-weight: 300;
-      color: #111;
+      color: #111 !important;
       text-align: center;
 
       @media screen and (max-width: 768px) {
@@ -117,10 +117,10 @@ function Response() {
 
   return (
     <ResponseContainer ref={containerRef}>
-      <div className="left">
+      <div className="responseleft">
         <Image src={astro} alt="FabFadSquad Form Submitted" />
       </div>
-      <div className="right">
+      <div className="responseright">
         <h1>Thank you for submitting the form!</h1>
         <p>
           We will get back to you as soon as possible. You can close this window

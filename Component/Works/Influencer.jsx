@@ -164,7 +164,7 @@ const InfluencerContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 99998;
+    z-index: 998;
     top: 0;
     left: 0;
     overflow: hidden;
@@ -180,7 +180,7 @@ const InfluencerContainer = styled.div`
       border: none;
       transition: 0.5s all ease-in-out;
       cursor: pointer;
-      z-index: 99999;
+      z-index: 999;
 
       &:hover {
         color: #111;
