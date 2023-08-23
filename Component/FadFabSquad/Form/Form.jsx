@@ -18,7 +18,7 @@ const FormContainer = styled(motion.form)`
 
   ::placeholder {
     color: #777;
-    font-weight: 300;
+    font-weight: 500;
   }
 
   @media screen and (max-width: 1000px) {
@@ -64,7 +64,7 @@ const FormContainer = styled(motion.form)`
         border: none;
         outline: none;
         font-size: 1.5rem;
-        font-weight: 100;
+        font-weight: 500;
         border-top: 1px #999 solid;
         border-right: 1px #999 solid;
         border-bottom: 1px #999 solid;
@@ -100,7 +100,7 @@ const FormContainer = styled(motion.form)`
         border: none;
         outline: none;
         font-size: 1.5rem;
-        font-weight: 100;
+        font-weight: 500;
         border-top: 1px #999 solid;
         border-bottom: 1px #999 solid;
         transition: all 0.5s ease-in-out;
@@ -142,7 +142,7 @@ const FormContainer = styled(motion.form)`
         border: none;
         outline: none;
         font-size: 1.5rem;
-        font-weight: 100;
+        font-weight: 500;
         border-top: 1px #999 solid;
         border-right: 1px #999 solid;
         border-bottom: 1px #999 solid;
@@ -178,7 +178,7 @@ const FormContainer = styled(motion.form)`
         border: none;
         outline: none;
         font-size: 1.5rem;
-        font-weight: 100;
+        font-weight: 500;
         border-top: 1px #999 solid;
         border-bottom: 1px #999 solid;
         transition: all 0.5s ease-in-out;
@@ -221,7 +221,7 @@ const FormContainer = styled(motion.form)`
         border: none;
         outline: none;
         font-size: 1.5rem;
-        font-weight: 100;
+        font-weight: 500;
         border-top: 1px #999 solid;
         border-bottom: 1px #999 solid;
         transition: all 0.5s ease-in-out;
@@ -264,7 +264,7 @@ const FormContainer = styled(motion.form)`
         border: none;
         outline: none;
         font-size: 1.5rem;
-        font-weight: 100;
+        font-weight: 500;
         border: 1px #999 solid;
         border-radius: 100px;
         resize: none;
@@ -315,7 +315,7 @@ const FormContainer = styled(motion.form)`
       font-size: 1.5rem;
       cursor: pointer;
       transition: all 0.3s ease-in-out;
-      font-weight: 100;
+      font-weight: 500;
       font-family: "roboto";
       gap: 0.5rem;
       position: relative;
