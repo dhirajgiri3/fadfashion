@@ -16,6 +16,11 @@ const FormContainer = styled(motion.form)`
   padding: 0 10rem;
   background: #fafafa;
 
+  ::placeholder {
+    color: #777;
+    font-weight: 300;
+  }
+
   @media screen and (max-width: 1000px) {
     min-height: 50vh;
     padding: 5rem;

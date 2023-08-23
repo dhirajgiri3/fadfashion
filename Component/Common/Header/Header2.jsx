@@ -2,7 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import logo from "@/Assets/Images/logo.png";
+import logo from "@/Assets/Images/logo-dark.png";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import style from "./(css)/Header2.module.css";
