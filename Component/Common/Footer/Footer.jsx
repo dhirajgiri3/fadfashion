@@ -311,34 +311,37 @@ function Footer() {
           </div>
           <div className="right">
             <div className="icons">
-              <Link href="/">
+              <a href="https://www.instagram.com/fad__in" target="_blank">
                 <InstagramIcon
                   style={{
                     fontSize: "2rem",
                   }}
                 />
-              </Link>
-              <Link href="/">
-                <FacebookIcon
-                  style={{
-                    fontSize: "2rem",
-                  }}
-                />
-              </Link>
-              <Link href="/">
-                <TwitterIcon
-                  style={{
-                    fontSize: "2rem",
-                  }}
-                />
-              </Link>
-              <Link href="/">
-                <YouTubeIcon
-                  style={{
-                    fontSize: "2rem",
-                  }}
-                />
-              </Link>
+              </a>
+              {/* <Link href="/"> */}
+              <FacebookIcon
+                style={{
+                  fontSize: "2rem",
+                  cursor: "not-allowed",
+                }}
+              />
+              {/* </Link> */}
+              {/* <Link href="/"> */}
+              <TwitterIcon
+                style={{
+                  fontSize: "2rem",
+                  cursor: "not-allowed",
+                }}
+              />
+              {/* </Link> */}
+              {/* <Link href="/"> */}
+              <YouTubeIcon
+                style={{
+                  fontSize: "2rem",
+                  cursor: "not-allowed",
+                }}
+              />
+              {/* </Link> */}
             </div>
             <p>© 2021 FAD. All rights reserved.</p>
             <p>

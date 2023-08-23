@@ -253,7 +253,7 @@ const FormContainer = styled.div`
         line-height: 1.5;
         width: 80%;
         margin-left: 0;
-        color: #ccc;
+        color: #ffffff99;
 
         @media screen and (max-width: 1000px) {
           font-size: 2rem;
