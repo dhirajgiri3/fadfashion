@@ -6,7 +6,6 @@ import logo from "@/Assets/Images/logo.png";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import style from "./(css)/Header.module.css";
-import WideButton from "@/Component/Animation/Buttons/WideButton";
 
 function Header() {
   return (

@@ -35,12 +35,26 @@ body {
 
   @media screen and (max-width: 1000px) {
     padding: 0 5rem;
-    margin-top: 5rem;
   }
 
   @media screen and (max-width: 768px) {
     padding: 0 1rem;
-    margin-top: 5rem;
+  }
+}
+
+.click-title {
+  margin: 0;
+  padding: 0;
+  margin-left: 10rem;
+  color: #ffffff;
+  font-size: 1.2rem;
+
+  @media screen and (max-width: 1000px) {
+    margin-left: 5rem;
+  }
+
+  @media screen and (max-width: 768px) {
+    margin-left: 1rem;
   }
 }
 
@@ -216,6 +230,10 @@ body {
   font-size: 2rem;
   font-family: "kurdasan-heading" !important;
   color: #fff;
+
+  @media screen and (max-width: 768px) {
+    font-size: 2.5rem;
+  }
 }
 
 .intro-title__main {
@@ -246,8 +264,9 @@ body {
 .slider-title__main {
   font-size: 5rem;
   mix-blend-mode: normal !important;
-  background: linear-gradient(#00000099, #00000080, #00000050);
+  /* background: linear-gradient(#00000099, #00000080, #00000050); */
   padding: 1rem;
+  text-align: center;
 
   @media screen and (max-width: 768px) {
     font-size: 3rem;

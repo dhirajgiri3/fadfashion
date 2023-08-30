@@ -18,7 +18,7 @@ const images = [img3, img2, img1];
 const text = [
   "Unlock coupon and more by doing fashion",
   "Level up with fashion",
-  "Create Share fashion",
+  "Create and Share fashion",
 ];
 
 const para = [
@@ -216,28 +216,38 @@ const Sliders = () => {
     );
   };
 
+  const variants = {
+    hidden: { opacity: 0, y: 100 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.8,
+        ease: "easeInOut",
+        stiffness: 100,
+        damping: 5,
+        type: "spring",
+        beforeEnter: (el) => {
+          el.style.opacity = 0;
+          el.style.transform = "scale(0)";
+        },
+        afterEnter: (el) => {
+          el.style.opacity = 1;
+          el.style.transform = "scale(1)";
+        },
+      },
+    },
+  };
+
   return (
     <div>
       <SliderContainer>
         <Sliderss>
           <ImageContainer>
             <motion.div
-              initial={{
-                y: "100%",
-                opacity: 0,
-              }}
-              whileInView={{
-                y: 0,
-                opacity: 1,
-                transition: {
-                  duration: 1.5,
-                  ease: "easeOut",
-
-                  repeat: false,
-                  type: "spring",
-                  stiffness: 100,
-                },
-              }}
+              variants={variants}
+              initial="hidden"
+              whileInView="visible"
             >
               <Slide
                 src={items[currentIndex].image}
@@ -248,42 +258,16 @@ const Sliders = () => {
           </ImageContainer>
           <Content>
             <motion.div
-              initial={{
-                y: 100,
-                opacity: 0,
-              }}
-              whileInView={{
-                y: 0,
-                opacity: 1,
-                transition: {
-                  duration: 1.5,
-                  ease: "easeOut",
-
-                  repeat: false,
-                  type: "spring",
-                  stiffness: 100,
-                },
-              }}
+              variants={variants}
+              initial="hidden"
+              whileInView="visible"
             >
               <Heading title="FAD">{items[currentIndex].text}</Heading>
             </motion.div>
             <motion.div
-              initial={{
-                y: 10,
-                opacity: 0,
-              }}
-              whileInView={{
-                y: 0,
-                opacity: 1,
-                transition: {
-                  duration: 1.5,
-                  ease: "easeOut",
-
-                  repeat: false,
-                  type: "spring",
-                  stiffness: 100,
-                },
-              }}
+              variants={variants}
+              initial="hidden"
+              whileInView="visible"
             >
               <Para title="FAD">{items[currentIndex].para}</Para>
             </motion.div>
@@ -299,22 +283,9 @@ const Sliders = () => {
           >
             {" "}
             <motion.div
-              initial={{
-                y: 100,
-                opacity: 0,
-              }}
-              whileInView={{
-                y: 0,
-                opacity: 1,
-                transition: {
-                  duration: 1.5,
-                  ease: "easeOut",
-
-                  repeat: false,
-                  type: "spring",
-                  stiffness: 100,
-                },
-              }}
+              variants={variants}
+              initial="hidden"
+              whileInView="visible"
             >
               <WideButton
                 text="Prev"
@@ -343,22 +314,9 @@ const Sliders = () => {
             }}
           >
             <motion.div
-              initial={{
-                y: 100,
-                opacity: 0,
-              }}
-              whileInView={{
-                y: 0,
-                opacity: 1,
-                transition: {
-                  duration: 1.5,
-                  ease: "easeOut",
-
-                  repeat: false,
-                  type: "spring",
-                  stiffness: 100,
-                },
-              }}
+              variants={variants}
+              initial="hidden"
+              whileInView="visible"
             >
               <WideButton
                 text="Next"

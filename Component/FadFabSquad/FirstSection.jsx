@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import React from "react";
 import styled from "styled-components";
+import Header from "../Common/Header/Header";
 
 const FadfabsquadFirstContainer = styled.div`
   width: 100%;
@@ -166,7 +167,7 @@ const FadfabsquadFirstContainer = styled.div`
         font-size: 5rem;
         font-weight: 100;
         color: #eee;
-        font-family: 'kurdasan';
+        font-family: "kurdasan";
 
         @media screen and (max-width: 768px) {
           rotate: -90deg;
@@ -195,7 +196,6 @@ const FadfabsquadFirstContainer = styled.div`
     align-items: flex-start;
     padding: 0 10rem;
 
-
     @media screen and (max-width: 1000px) {
       top: 13vh;
     }
@@ -212,10 +212,8 @@ const FadfabsquadFirstContainer = styled.div`
     h1 {
       font-size: 10rem;
       font-weight: 500;
-      background: -webkit-linear-gradient(#ffffff,#c7bbff , #241952);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      font-family: 'kurdasan';
+      font-family: "kurdasan";
+      color: #fff;
 
       @media screen and (max-width: 768px) {
         font-size: 3.8rem;
@@ -243,44 +241,58 @@ function FirstSection() {
   };
 
   return (
-    <FadfabsquadFirstContainer>
-      <motion.div className="bg"></motion.div>
-      <div className="overlay"></div>
-      <div className="content">
-        <div className="left">
-          <motion.p variants={variants} initial="hidden" whileInView="visible">
-            FAD &rarr; FadFabSquad
-          </motion.p>
+    <>
+      <FadfabsquadFirstContainer>
+        <motion.div className="bg"></motion.div>
+        <div className="overlay"></div>
+        <div className="content">
+          <div className="left">
+            <motion.p
+              variants={variants}
+              initial="hidden"
+              whileInView="visible"
+            >
+              FAD &rarr; FadFabSquad
+            </motion.p>
+          </div>
+          <div className="mid">
+            <motion.p
+              variants={variants}
+              initial="hidden"
+              whileInView="visible"
+            >
+              FadFabSquad is a premium influencer program created by Fad,
+              specially crafted for fashion enthusiasts like you who are
+              passionate about fashion and content creation. This is your chance
+              to shine, connect, and grow. This program is designed to provide
+              an opportunity for fashion enthusiasts, much like yourself, to
+              become an integral part of India's first fashion community
+              platform and receive the recognition they rightfully deserve.{" "}
+              <br /> <br /> This program promotes collaboration with Fad and
+              other fashion influencers, allowing them to create unique content
+              and share it on social media platforms. It provides a community of
+              like-minded fashion influencers who can support and motivate each
+              other to reach their goals.
+            </motion.p>
+          </div>
+          <div className="right"></div>
+          <div className="right2">
+            <motion.h3
+              variants={variants}
+              initial="hidden"
+              whileInView="visible"
+            >
+              Empowering Fashion Influencers with FadFabSquad
+            </motion.h3>
+          </div>
         </div>
-        <div className="mid">
-          <motion.p variants={variants} initial="hidden" whileInView="visible">
-            FadFabSquad is a premium influencer program created by Fad,
-            specially crafted for fashion enthusiasts like you who are
-            passionate about fashion and content creation. This is your chance
-            to shine, connect, and grow. This program is designed to provide an
-            opportunity for fashion enthusiasts, much like yourself, to become
-            an integral part of India's first fashion community platform and
-            receive the recognition they rightfully deserve. <br /> <br /> This
-            program promotes collaboration with Fad and other fashion
-            influencers, allowing them to create unique content and share it on
-            social media platforms. It provides a community of like-minded
-            fashion influencers who can support and motivate each other to reach
-            their goals.
-          </motion.p>
+        <div className="top">
+          <motion.h1 variants={variants} initial="hidden" whileInView="visible">
+            What is FadFabSquad?
+          </motion.h1>
         </div>
-        <div className="right"></div>
-        <div className="right2">
-          <motion.h3 variants={variants} initial="hidden" whileInView="visible">
-            Empowering Fashion Influencers with FadFabSquad
-          </motion.h3>
-        </div>
-      </div>
-      <div className="top">
-        <motion.h1 variants={variants} initial="hidden" whileInView="visible">
-          What is FadFabSquad?
-        </motion.h1>
-      </div>
-    </FadfabsquadFirstContainer>
+      </FadfabsquadFirstContainer>
+    </>
   );
 }
 

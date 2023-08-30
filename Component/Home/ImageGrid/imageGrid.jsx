@@ -348,29 +348,32 @@ const ImageGrid = () => {
   }, []);
 
   return (
-    <main className="main">
-      <Images imagesRef={imagesRef} />
-      <div className="intro-title">
-        <h2 className="intro-title__main oh">
-          <span className="oh__inner">FAD</span>
-        </h2>
-        <span className="intro-title__sub oh">
-          <span className="oh__inner">
-            Join Fad, The Ultimate Fashion Community Platform!
+    <>
+      <p className="click-title"> *click on the image</p>
+      <main className="main">
+        <Images imagesRef={imagesRef} />
+        <div className="intro-title">
+          <h2 className="intro-title__main oh">
+            <span className="oh__inner">FAD</span>
+          </h2>
+          <span className="intro-title__sub oh">
+            <span className="oh__inner">
+              Join Fad, The Ultimate Fashion Community Platform!
+            </span>
           </span>
-        </span>
-      </div>
+        </div>
 
-      <Slider currentImageIndex={currentImageIndex} />
-      <div className="controls">
-        <button className="unbutton close" ref={closeBtnRef}>
-          X
-        </button>
-      </div>
-      <div className="dragcursor">
-        <div className="dragcursor__inner">Drag</div>
-      </div>
-    </main>
+        <Slider currentImageIndex={currentImageIndex} />
+        <div className="controls">
+          <button className="unbutton close" ref={closeBtnRef}>
+            X
+          </button>
+        </div>
+        <div className="dragcursor">
+          <div className="dragcursor__inner">Drag</div>
+        </div>
+      </main>
+    </>
   );
 };
 

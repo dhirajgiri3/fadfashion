@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import EastIcon from "@mui/icons-material/East";
 import Link from "next/link";
 
-const Container = styled.div`
+const AppContainer = styled.div`
   width: 100%;
   height: 100vh;
   display: flex;
@@ -27,10 +27,10 @@ const Container = styled.div`
   .left {
     display: flex;
     width: 75%;
-    padding-top: 15vh;
     position: relative;
     z-index: 0;
     height: 83vh;
+    margin-top: 15vh;
 
     @media screen and (max-width: 768px) {
       width: 100%;
@@ -291,7 +291,7 @@ function Hero() {
   };
 
   return (
-    <Container>
+    <AppContainer>
       <div className="left">
         <video
           autoPlay
@@ -321,6 +321,7 @@ function Hero() {
                 stiffness: 100,
               },
             }}
+            
             className="left"
           >
             <div className="top">
@@ -357,16 +358,7 @@ function Hero() {
       </div>
       <div className="right">
         <div className="up">
-          {" "}
-          {/* <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            ref={videoRef}
-            src="https://res.cloudinary.com/divbobkmd/video/upload/v1690745994/fad-reel-2_AdobeExpress_simbrc.mp4"
-            className="upvideo"
-          /> */}
+      
           <img
             className="upvideo"
             src="https://images.unsplash.com/photo-1609505848912-b7c3b8b4beda?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=500"
@@ -402,7 +394,7 @@ function Hero() {
             className="downvideo"
           />
           <div className="overlay"></div>
-          <Link href="/how-it-works">
+          <Link href="/howfadworks">
             <div className="content">
               {" "}
               <div className="top">
@@ -416,7 +408,7 @@ function Hero() {
           </Link>
         </div>
       </div>
-    </Container>
+    </AppContainer>
   );
 }
 

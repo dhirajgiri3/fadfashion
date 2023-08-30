@@ -20,7 +20,7 @@ const Loader1Container = styled.div`
   .overlay {
     height: 100vh;
     width: 100%;
-    background: #9288f8;
+    background: #ff005c;
     position: fixed;
     z-index: 99999;
     top: 0;

@@ -180,7 +180,7 @@ const InfluencerContainer = styled.div`
       border: none;
       transition: 0.5s all ease-in-out;
       cursor: pointer;
-      z-index: 999;
+      z-index: 1000;
 
       &:hover {
         color: #111;
@@ -231,7 +231,6 @@ function Influencer() {
       transition: {
         duration: 0.5,
         ease: "easeInOut",
-        type: "spring",
         stiffness: 100,
         damping: 5,
         beforeEnter: (el) => {
@@ -328,7 +327,12 @@ function Influencer() {
             className="form"
           >
             <Form />
-            <button onClick={() => setShowPopup(false)} className="close">
+            <button
+              onClick={() => {
+                setShowPopup(false);
+              }}
+              className="close"
+            >
               &#x2715;
             </button>
           </motion.div>

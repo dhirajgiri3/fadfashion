@@ -14,6 +14,9 @@ import { useInView } from "react-intersection-observer";
 import Popup from "@/Component/Home/Popup/Popup";
 import Header from "@/Component/Common/Header/Header";
 import Loader1 from "@/Component/Common/Loaders/Loader1";
+import Hero from "@/Component/Home/Hero/Hero";
+import Work from "@/Component/Home/Work/Work";
+import Drips from "@/Component/Home/Work/Drips";
 
 const PageContainer = styled.div`
   cursor: auto;
@@ -26,6 +29,7 @@ function Page() {
   const pageContainers = useRef(null);
   const [sliderSectionRef, sliderSectionInView] = useInView({ threshold: 0.4 });
   const [formSectionRef, formSectionInView] = useInView({ threshold: 0.4 });
+  const [workSectionRef, workSectionInView] = useInView({ threshold: 0.4 });
   const [videoSectionRef, videoSectionInView] = useInView({ threshold: 0.4 });
   const [loading, setLoading] = useState(true);
 
@@ -38,7 +42,7 @@ function Page() {
   useEffect(() => {
     if (sliderSectionInView) {
       gsap.to(pageContainers.current, {
-        backgroundColor: "#4E3636",
+        backgroundColor: "#000",
         duration: 0.3,
         ease: "power2.inOut",
       });
@@ -70,9 +74,27 @@ function Page() {
   }, [formSectionInView]);
 
   useEffect(() => {
+    if (workSectionInView) {
+      // The slider section is in view, change the background color of the container smoothly
+      gsap.to(pageContainers.current, {
+        backgroundColor: "#fff",
+        duration: 0.3,
+        ease: "power2.inOut",
+      });
+    } else {
+      // The slider section is not in view, reset the background color smoothly
+      gsap.to(pageContainers.current, {
+        backgroundColor: "#101010",
+        duration: 0.3,
+        ease: "power2.inOut",
+      });
+    }
+  }, [workSectionInView]);
+
+  useEffect(() => {
     if (videoSectionInView) {
       gsap.to(pageContainers.current, {
-        backgroundColor: "#393646",
+        backgroundColor: "#fff",
         duration: 0.3,
         ease: "power2.inOut",
       });
@@ -99,16 +121,18 @@ function Page() {
             <div className="section vidparagraph" ref={sliderSectionRef}>
               <VidPara />
             </div>
-            <div className="section slider" id="slider">
-              <Slider />
-            </div>
-            <div className="section video1" ref={videoSectionRef}>
-              <Video1 />
-            </div>
             <div className="section imageGrid" id="imagegrid">
               <ImageGrid />
             </div>
-
+            <div className="section work" ref={videoSectionRef}>
+              <Work />
+            </div>
+            <div className="section work">
+              <Drips />
+            </div>
+            <div className="section slider" id="slider">
+              <Slider />
+            </div>
             <div className="section form" id="form" ref={formSectionRef}>
               <Form />
             </div>

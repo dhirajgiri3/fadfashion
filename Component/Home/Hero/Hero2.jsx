@@ -165,18 +165,17 @@ const Hero2Container = styled.div`
           align-items: flex-end;
           p {
             font-family: "roboto";
-            line-height: 1.3;
-            width: 40%;
-            font-size: 1.3rem;
+            line-height: 1.5;
+            width: 70%;
+            font-size: 2rem;
             color: #ffffff;
-            font-weight: 300;
+            font-weight: 100;
             display: flex;
             flex-direction: column;
-            letter-spacing: 0.5px;
 
             @media screen and (max-width: 1000px) {
               width: 75%;
-              font-size: 1.5rem;
+              font-size: 2rem;
               border-radius: 0px;
               padding: 0;
               background: transparent;
@@ -184,7 +183,7 @@ const Hero2Container = styled.div`
 
             @media screen and (max-width: 768px) {
               width: 100%;
-              font-size: 1.5rem;
+              font-size: 1.8rem;
               border-radius: 0px;
               padding: 0;
               background: transparent;
@@ -268,11 +267,9 @@ function Hero2() {
             </div>{" "}
             <div className="bright">
               <p>
-                Welcome to FAD - the revolutionary fashion community platform
-                where you can freely express your funky style, learn, and
-                connect with like-minded fashion enthusiasts from all over the
-                world. Embrace your fashion passion and earn money for your
-                skills! Indulge without fear of judgment. Join us now
+                Discover a vibrant community that celebrates fashion,
+                creativity, and individuality. <br /> Join Fad and be a part of India's
+                first Fashion Community Platform.
               </p>
             </div>
           </div>

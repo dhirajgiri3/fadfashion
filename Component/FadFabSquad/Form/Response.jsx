@@ -13,7 +13,7 @@ const ResponseContainer = styled.div`
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1000;
+  z-index: 1001;
   transition: all 1s ease-in-out;
   background: #c5c5fe;
   overflow: hidden;
@@ -127,7 +127,14 @@ function Response() {
           now.
         </p>
         <div className="close">
-          <button onClick={responseClose}> &#x2715;</button>
+          <button
+            onClick={() => {
+              responseClose();
+              window.location.reload();
+            }}
+          >
+            &#x2715;
+          </button>
         </div>
       </div>
     </ResponseContainer>

@@ -291,10 +291,9 @@ function Footer() {
             </div>
             <div className="mid">
               <p>
-                new generation social media app that unlocks the vibrant world
-                of fashion. Join us as we embark on an exciting journey of
-                style, creativity, and trendsetting influencers. Get ready to
-                explore the fashion universe like never before.
+                Fad is more than a platform – it's a movement that empowers
+                fashion enthusiasts and influencers. Our mission is to provide a
+                space where your style shines, and your influence grows.
               </p>
             </div>
             <div className="bottom">
@@ -325,23 +324,20 @@ function Footer() {
                   cursor: "not-allowed",
                 }}
               />
-              {/* </Link> */}
-              {/* <Link href="/"> */}
+
               <TwitterIcon
                 style={{
                   fontSize: "2rem",
                   cursor: "not-allowed",
                 }}
               />
-              {/* </Link> */}
-              {/* <Link href="/"> */}
+
               <YouTubeIcon
                 style={{
                   fontSize: "2rem",
                   cursor: "not-allowed",
                 }}
               />
-              {/* </Link> */}
             </div>
             <p>© 2021 FAD. All rights reserved.</p>
             <p>

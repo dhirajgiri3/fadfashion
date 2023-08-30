@@ -16,7 +16,6 @@ const VidParaContainer = styled.div`
   flex-direction: column;
   gap: 3rem;
 
-
   @media screen and (max-width: 1000px) {
     padding: 0 5rem;
   }
@@ -49,25 +48,24 @@ const VidParaContainer = styled.div`
 
   h3 {
     font-family: "roboto";
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: #fff;
     text-align: left;
     font-weight: 100;
-    letter-spacing: .5px;
+    letter-spacing: 0.5px;
     line-height: 2.5;
 
     @media screen and (max-width: 768px) {
-      font-size: 2rem;
+      font-size: 1.7rem;
       line-height: 2;
     }
 
     span {
       video {
-        width: 25vw;
+        width: 20vw;
         height: 20vh;
-        object-fit: cover;
+        object-fit: contain;
         border-radius: 100px;
-        cursor: pointer;
 
         @media screen and (max-width: 768px) {
           height: 15vh;
@@ -119,7 +117,7 @@ function VidPara() {
             muted={isMuted}
             ref={videoRef}
             onClick={handleToggleMute}
-            src="https://res.cloudinary.com/divbobkmd/video/upload/v1690758500/fad-reel-1_resize_j910nb.mp4"
+            src="https://res.cloudinary.com/divbobkmd/video/upload/v1691835562/fad-logo-aniamtion_b2eukj.mp4"
           ></motion.video>
         </span>
         With FAD, you'll never miss a moment in the fashion scene. Stay updated

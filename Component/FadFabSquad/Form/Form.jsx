@@ -34,7 +34,7 @@ const FormContainer = styled(motion.form)`
     font-size: 6rem;
     font-weight: 700;
     color: #111;
-    font-family: 'kurdasan';
+    font-family: "kurdasan";
     margin: 3rem auto;
     text-align: center;
 
@@ -398,7 +398,7 @@ function Form() {
             id="address"
             type="text"
             name="address"
-            placeholder="Address"
+            placeholder="Your Instagram Link"
           />
           <ValidationError
             prefix="Address"
@@ -412,7 +412,7 @@ function Form() {
           <textarea
             id="message"
             name="message"
-            placeholder=" Tell Me Why We Should Include You In FadFabSquad?"
+            placeholder="Why Should We Include You In The FadFabSquad?"
           />
           <ValidationError
             prefix="Message"
@@ -423,7 +423,7 @@ function Form() {
       </div>
       <div className="fifth">
         <button className="button" type="submit" disabled={state.submitting}>
-         Submit
+          Submit
         </button>
       </div>
     </FormContainer>
