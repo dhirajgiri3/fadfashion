@@ -52,7 +52,6 @@ function page() {
       ) : (
         <>
           <Container>
-            {/* <Header /> */}
             <First />
             <TierSystem />
             <BattleWars />

@@ -44,12 +44,8 @@ const Firsts = styled.div`
 
     h1 {
       font-size: 13rem;
-      font-family: 'kurdasan';
-
-      background: -webkit-linear-gradient(#fff, #222);
-      background: linear-gradient(to left, #fff, #ffd3e0, #ff005c);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      font-family: "kurdasan";
+      color: #fff;
 
       @media screen and (max-width: 1000px) {
         font-size: 10rem;

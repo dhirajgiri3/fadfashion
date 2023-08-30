@@ -29,9 +29,7 @@ const BattleContainer = styled.div`
 
     h1 {
       font-size: 5rem;
-      background: -webkit-linear-gradient(#ff005c, #ffd5e5);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      color: #fff;
       font-family: 'kurdasan';
 
       @media screen and (max-width: 1000px) {
@@ -64,9 +62,7 @@ const BattleContainer = styled.div`
 
     h1 {
       font-size: 7rem;
-      background: -webkit-linear-gradient(#ff005c, #ffd5e5);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      color: #fff;
       font-family: 'kurdasan';
 
       @media screen and (max-width: 1000px) {
