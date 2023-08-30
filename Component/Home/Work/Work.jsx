@@ -122,6 +122,7 @@ const WorkContainer = styled.div`
       background: #fff;
       border-radius: 50px;
       border: 2px solid #ff005c;
+      overflow: hidden;
 
       @media screen and (max-width: 1000px) {
         border-radius: 30px;
@@ -240,6 +241,7 @@ const WorkContainer = styled.div`
         border-radius: 50px;
         padding: 2rem;
         border: 2px solid #ff005c;
+        overflow: hidden;
 
         @media screen and (max-width: 1000px) {
           width: 100%;
@@ -270,6 +272,7 @@ const WorkContainer = styled.div`
         border-radius: 50px;
         padding: 2rem;
         border: 2px solid #ff005c;
+        overflow: hidden;
 
         @media screen and (max-width: 1000px) {
           width: 100%;

@@ -5,7 +5,7 @@ import styled from "styled-components";
 import { gsap } from "gsap";
 import { Flip } from "gsap/Flip";
 import WideButton from "@/Component/Animation/Buttons/WideButton";
-import img1 from "@/Assets/Images/img1.png";
+import img1 from "@/Assets/Images/slider-img1.png";
 import img2 from "@/Assets/Images/img2.png";
 import img3 from "@/Assets/Images/img3.png";
 import Image from "next/image";
