@@ -339,7 +339,7 @@ function Footer() {
                 }}
               />
             </div>
-            <p>© 2021 FAD. All rights reserved.</p>
+            <p>© 2023 FAD. All rights reserved.</p>
             <p>
               Created by{" "}
               <a
