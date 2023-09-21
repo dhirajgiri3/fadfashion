@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+//import { motion } from "framer-motion";
 import React, { useRef, useState } from "react";
 import styled from "styled-components";
 
@@ -127,4 +127,3 @@ function VidPara() {
   );
 }
 
-export default VidPara;
