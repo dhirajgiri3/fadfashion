@@ -297,14 +297,15 @@ function Footer() {
               </p>
             </div>
             <div className="bottom">
-              <Link href="mailto:dhirajg934@gmail.com">
+              <Link href="mailto:businessteamfad@gmail.com">
                 {" "}
-                <p>fad@gmail.com </p>
+                <p>businessteamfad@gmail.com </p>
               </Link>
 
               <Link href="tel:+919904392992">
                 {" "}
-                <p>+91 9904392992 </p>
+                <p>+91-9821211763 </p>
+                <p>+91-8287637236 </p>
               </Link>
             </div>
           </div>
@@ -339,7 +340,7 @@ function Footer() {
                 }}
               />
             </div>
-            <p>© 2021 FAD. All rights reserved.</p>
+            <p>© 2023 FAD. All rights reserved.</p>
             <p>
               Created by{" "}
               <a
