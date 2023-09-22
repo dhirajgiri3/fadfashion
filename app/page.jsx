@@ -118,8 +118,8 @@ function Page() {
             <div className="section hero">
               <Hero2 />
             </div>
-            <div className="section vidparagraph" ref={sliderSectionRef}>
-              <VidPara />
+            <div className="section slider" id="slider">
+              <Slider />
             </div>
             <div className="section imageGrid" id="imagegrid">
               <ImageGrid />
@@ -130,9 +130,7 @@ function Page() {
             <div className="section work">
               <Drips />
             </div>
-            <div className="section slider" id="slider">
-              <Slider />
-            </div>
+            
             <div className="section form" id="form" ref={formSectionRef}>
               <Form />
             </div>
